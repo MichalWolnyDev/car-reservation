@@ -1845,20 +1845,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+var _computed$data$comput;
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
 //
 //
-var default_layout = "default";
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+//
+//
+// const default_layout = "default";
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_computed$data$comput = {
   computed: {},
   data: function data() {
     return {
       message: 'Hello World'
     };
   }
-});
+}, _defineProperty(_computed$data$comput, "computed", _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)(['getReservations']))), _defineProperty(_computed$data$comput, "mounted", function mounted() {
+  this.$store.dispatch('allCategoryFromDatabase');
+}), _computed$data$comput);
 
 /***/ }),
 
@@ -1870,9 +1884,9 @@ var default_layout = "default";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var _views_app_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./views/app.vue */ "./resources/js/views/app.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/index */ "./resources/js/store/index.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
@@ -1880,10 +1894,11 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_2__.default.use(vuex__WEBPACK_IMPORTED_MODULE_1__.default);
+vue__WEBPACK_IMPORTED_MODULE_1__.default.use(vuex__WEBPACK_IMPORTED_MODULE_2__.default);
 
-var store = new vuex__WEBPACK_IMPORTED_MODULE_1__.default.Store(_store_index__WEBPACK_IMPORTED_MODULE_3__.default);
-var app = new vue__WEBPACK_IMPORTED_MODULE_2__.default({
+var store = new vuex__WEBPACK_IMPORTED_MODULE_2__.default.Store(_store_index__WEBPACK_IMPORTED_MODULE_3__.default);
+vue__WEBPACK_IMPORTED_MODULE_1__.default.prototype.$store = store;
+var app = new vue__WEBPACK_IMPORTED_MODULE_1__.default({
   el: '#app',
   components: {
     App: _views_app_vue__WEBPACK_IMPORTED_MODULE_0__.default
@@ -1936,26 +1951,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   state: {
-    category: []
+    reservations: []
   },
-  getters: {//    getCategoryFormGetters(state){ //take parameter state
-    //       return state.category
-    //    }
+  getters: {
+    getReservations: function getReservations(state) {
+      //take parameter state
+      return state.reservations;
+    }
   },
-  actions: {//    allCategoryFromDatabase(context){
-    //       axios.get("api/category")
-    //            .then((response)=>{
-    //               console.log(response.data.categories)
-    //               context.commit("categories",response.data.categories) //categories will be run from mutation
-    //            })
-    //            .catch(()=>{
-    //               console.log("Error........")
-    //            })
-    //    }
+  actions: {
+    allCategoryFromDatabase: function allCategoryFromDatabase(context) {
+      axios.get("api/reservations").then(function (response) {
+        console.log(response.data);
+        context.commit("reservations", response.data); //reservations will be run from mutation
+      })["catch"](function () {
+        console.log("Error........");
+      });
+    }
   },
-  mutations: {//    categories(state,data) {
-    //       return state.category = data
-    //    }
+  mutations: {
+    reservations: function reservations(state, data) {
+      return state.reservations = data;
+    }
   }
 });
 
@@ -19468,7 +19485,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_vm._v("\n  " + _vm._s(_vm.message) + "asaa\n")])
+  return _c(
+    "div",
+    _vm._l(_vm.getReservations, function(item) {
+      return _c("p", { key: item.id }, [
+        _vm._v("\n    " + _vm._s(item) + "\n  ")
+      ])
+    }),
+    0
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

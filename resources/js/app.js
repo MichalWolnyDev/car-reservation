@@ -10,6 +10,7 @@ import storeData from "./store/index"
 const store = new Vuex.Store(
    storeData
 )
+Vue.prototype.$store = store
 
 const app = new Vue({
     el: '#app',
