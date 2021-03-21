@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{message}}asaa
+    {{message}}asaa DUPSON
   </div>
 </template>
 <script>
