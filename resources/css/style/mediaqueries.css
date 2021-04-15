@@ -1,0 +1,10 @@
+@media(max-width: 1440px){
+    .container{
+        padding: 0 1rem;
+    }
+}
+@media(max-width: 1200px){
+    .form-item{
+        flex: 1 0 31%;
+    }
+}

@@ -1,28 +1,27 @@
 <template>
   <div>
-    <p v-for="item in getReservations" :key="item.id">
-      {{ item }}
-    </p>
+    <div class="container">
+      <div>
+        <div class="nav">
+          <h1 class="nav-title">CRS</h1>
+        </div>
+        <p>
+          <router-link :to="{ name: 'form' }">Form</router-link> |
+          <router-link :to="{ name: 'dashboard' }">Dashboard</router-link>
+        </p>
+        <div class="content">
+          <router-view></router-view>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 // const default_layout = "default";
-import { mapGetters } from 'vuex';
 export default {
   computed: {},
   data() {
-      return {
-          message:'Hello World'
-      }
+    return {};
   },
-  computed: {
-    ...mapGetters([
-       'getReservations'
-      ])
-   },
-  mounted(){
-    this.$store.dispatch('allCategoryFromDatabase');
-  },
- 
 };
 </script>
