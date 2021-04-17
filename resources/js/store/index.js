@@ -2,40 +2,39 @@ export default {
 
 	state: {
 
-       category: []
+        reservations: []
 
 	},
 
 	getters: {
 
-    //    getCategoryFormGetters(state){ //take parameter state
+       getReservations(state){ //take parameter state
 
-    //       return state.category
-    //    }
+          return state.reservations
+       }
 	},
 
 	actions: {
-    //    allCategoryFromDatabase(context){
+       allCategoryFromDatabase(context){
+          axios.get("api/reservations")
 
-    //       axios.get("api/category")
+               .then((response)=>{
+                  console.log(response.data)
+                  context.commit("reservations",response.data) //reservations will be run from mutation
 
-    //            .then((response)=>{
-    //               console.log(response.data.categories)
-    //               context.commit("categories",response.data.categories) //categories will be run from mutation
+               })
 
-    //            })
-
-    //            .catch(()=>{
+               .catch(()=>{
                   
-    //               console.log("Error........")
+                  console.log("Error........")
                   
-    //            })
-    //    }
+               })
+       }
 	},
 
 	mutations: {
-    //    categories(state,data) {
-    //       return state.category = data
-    //    }
+       reservations(state,data) {
+          return state.reservations = data
+       }
 	}
 }
