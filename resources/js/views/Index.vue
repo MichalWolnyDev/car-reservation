@@ -3,7 +3,14 @@
     <div>
     
       <main>
-        <section>baner</section>
+        <section>
+            <div class="baner">
+                <div>
+                    <img class="baner-img" src="/img/Baner.jpg" alt="Baner">
+                </div>
+            </div>
+
+        </section>
         <section>content</section>
       </main>
       <footer></footer>

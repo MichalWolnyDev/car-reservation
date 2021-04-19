@@ -1902,6 +1902,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Index"
 });
@@ -1943,6 +1950,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -20315,7 +20332,16 @@ var staticRenderFns = [
     return _c("div", [
       _c("div", [
         _c("main", [
-          _c("section", [_vm._v("baner")]),
+          _c("section", [
+            _c("div", { staticClass: "baner" }, [
+              _c("div", [
+                _c("img", {
+                  staticClass: "baner-img",
+                  attrs: { src: "/img/Baner.jpg", alt: "Baner" }
+                })
+              ])
+            ])
+          ]),
           _vm._v(" "),
           _c("section", [_vm._v("content")])
         ]),
@@ -20383,26 +20409,42 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("nav", [
-      _vm._v("\n      nav\n      "),
-      _c(
-        "p",
-        [
-          _c("router-link", { attrs: { to: { name: "index" } } }, [
-            _vm._v("Strona główna")
-          ]),
-          _vm._v(" |\n        "),
-          _c("router-link", { attrs: { to: { name: "login" } } }, [
-            _vm._v("Zaloguj")
+      _c("div", [
+        _c("div", [
+          _c("div", { staticClass: "nav-flex" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", [
+              _c(
+                "p",
+                [
+                  _c("router-link", { attrs: { to: { name: "index" } } }, [
+                    _vm._v("Strona główna")
+                  ]),
+                  _vm._v(" |\n              "),
+                  _c("router-link", { attrs: { to: { name: "login" } } }, [
+                    _vm._v("Zaloguj")
+                  ])
+                ],
+                1
+              )
+            ])
           ])
-        ],
-        1
-      )
+        ])
+      ])
     ]),
     _vm._v(" "),
     _c("div", [_c("router-view")], 1)
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("img", { attrs: { src: "", alt: "" } })])
+  }
+]
 render._withStripped = true
 
 
