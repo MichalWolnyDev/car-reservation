@@ -6,7 +6,9 @@ import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import App from './views/app.vue'
 import Dashboard from './views/Dashboard.vue'
-import Form from './views/Form.vue'
+// import Form from './views/Form.vue'
+import Index from './views/Index.vue'
+import Login from './views/Login.vue'
 import storeData from "./store/index"
 
 Vue.use(Vuex);
@@ -17,13 +19,23 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            name: 'form',
-            component: Form
+            name: 'index',
+            component: Index
         },
+        // {
+        //     path: '/',
+        //     name: 'form',
+        //     component: Form
+        // },
         {
             path: '/dashboard',
             name: 'dashboard',
             component: Dashboard,
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login,
         },
     ],
 });

@@ -1,19 +1,27 @@
 <template>
   <div>
-    <div class="container">
+  <nav>
+        nav
+        <p>
+          <router-link :to="{ name: 'index' }">Strona główna</router-link> |
+          <router-link :to="{ name: 'login' }">Zaloguj</router-link>
+        </p>
+      </nav>
+    <!-- <div class="container">
       <div>
         <div class="nav">
           <h1 class="nav-title">CRS</h1>
         </div>
-        <p>
-          <router-link :to="{ name: 'form' }">Form</router-link> |
-          <router-link :to="{ name: 'dashboard' }">Dashboard</router-link>
-        </p>
+        
         <div class="content">
-          <router-view></router-view>
         </div>
       </div>
+    </div> -->
+    <div>
+    <router-view></router-view>
+
     </div>
+
   </div>
 </template>
 <script>

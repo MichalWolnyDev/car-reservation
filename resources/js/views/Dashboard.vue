@@ -4,6 +4,7 @@
             <div>
                 <div>
                     <ul>
+                        
                         <li v-for="item in getReservations" :key="item.id">>
                           {{ item }}
                         </li>
