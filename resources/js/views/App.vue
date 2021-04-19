@@ -1,12 +1,24 @@
 <template>
   <div>
-  <nav>
-        nav
-        <p>
-          <router-link :to="{ name: 'index' }">Strona główna</router-link> |
-          <router-link :to="{ name: 'login' }">Zaloguj</router-link>
-        </p>
-      </nav>
+    <nav>
+      <div >
+        <div>
+          <div class="nav-flex">
+            <div>
+              <img src="" alt="">
+            </div>
+            <div>
+<p>
+              <router-link :to="{ name: 'index' }">Strona główna</router-link> |
+              <router-link :to="{ name: 'login' }">Zaloguj</router-link>
+            </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <!-- <div class="container">
       <div>
         <div class="nav">
@@ -18,10 +30,8 @@
       </div>
     </div> -->
     <div>
-    <router-view></router-view>
-
+      <router-view></router-view>
     </div>
-
   </div>
 </template>
 <script>
