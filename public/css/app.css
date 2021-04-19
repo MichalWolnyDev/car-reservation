@@ -7,10 +7,21 @@
 
 }
 .nav-header{
-    flex:1 1 100%;
-    color: gray;
+    display: flex;
+    color: red;
     margin: 0px auto;
     height: 50px;
+    justify-content: space-between;
+    background-color: rgb(204, 204, 204);
+}
+.nav-logo{
+    
+}
+.nav-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
 }
 .form{
     display: flex;

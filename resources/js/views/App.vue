@@ -4,10 +4,10 @@
       <div >
         <div>
           <div class="nav-header">
-            <div>
-              <img src="" alt="">
+            <div class="nav-logo">
+              <img src="/img/Logo.jpg" alt="NO IMG">
             </div>
-            <div>
+            <div class="nav-login">
 <p>
               <router-link :to="{ name: 'index' }">Strona główna</router-link> |
               <router-link :to="{ name: 'login' }">Zaloguj</router-link>
