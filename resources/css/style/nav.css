@@ -6,3 +6,9 @@
     text-align: center;
 
 }
+.nav-header{
+    flex:1 1 100%;
+    color: gray;
+    margin: 0px auto;
+    height: 50px;
+}
