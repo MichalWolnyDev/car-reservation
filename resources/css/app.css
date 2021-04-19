@@ -16,9 +16,10 @@ html, body{
     max-width: 1440px;
     margin: 0 auto;
 }
-.content{
-    padding: 3rem 1rem;
-    background-color: chocolate;
+
+a, a:visited{
+    text-decoration: none;
+    color: inherit;
 }
 
 
