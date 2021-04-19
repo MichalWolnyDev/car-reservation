@@ -3,7 +3,7 @@
     <nav>
       <div >
         <div>
-          <div class="nav-flex">
+          <div class="nav-header">
             <div>
               <img src="" alt="">
             </div>
