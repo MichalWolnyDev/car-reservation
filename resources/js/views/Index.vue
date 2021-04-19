@@ -39,7 +39,7 @@
               <div class="content-row">
                 <div class="content-col">
                   <div class="text-center">
-                    <img src="/img/Content.jpg" alt="" />
+                    <img class="content-img" src="/img/Content.jpg" alt="" />
                   </div>
                 </div>
                 <div class="content-col">
@@ -131,6 +131,7 @@ export default {
 .content{
     margin-bottom: 2rem;
 }
+
 .content-hello {
   padding: 2rem 0;
 }
@@ -156,6 +157,9 @@ export default {
     margin-bottom: 1rem;
 }
 @media(max-width: 960px){
+      .content-img{
+      max-width: 100%;
+    }
     .content-row{
         display: block;
     }
