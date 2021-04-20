@@ -9,9 +9,12 @@
             </div>
             <div class="nav-login">
               <p>
-                <router-link :to="{ name: 'index' }">Strona główna</router-link>
-                |
-                <router-link :to="{ name: 'login' }">Zaloguj</router-link>
+                <div class="nav-mainsitebutton">
+                  <router-link :to="{ name: 'index' }">Strona główna</router-link>
+                </div>
+                <div class="nav-loginbutton">
+                  <router-link :to="{ name: 'login' }">Zaloguj</router-link>
+                </div>
               </p>
             </div>
           </div>

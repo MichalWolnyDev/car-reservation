@@ -99,6 +99,46 @@
             </carousel>
           </div>
         </section>
+        <div class="container">
+          <div>
+            <div>
+              <div>
+                <div class="content-formtext1">
+                  <h2>Kontakt</h2><br><br>
+                </div>
+                <div class="content-formtext2">
+                  Jeśli chcesz się znami skontaktować lub umówić termin wizyty, wypełnij poniższy formularz. Nasz konsultat skontaktuje się z Tobą tak szybko jak to możliwe.
+                </div>
+                <form class="content-form">
+                  <div class="content-form-item">
+                    <label for="name">Imię:</label>
+                    <input class="content-form-input" type="text" name="name" placeholder="Imie/Name" />
+                  </div>
+                  <div class="content-form-item">
+                    <label for="surname">Nazwisko:</label>
+                    <input class="content-form-input" type="text" name="surname" placeholder="Nazwisko/Surname" />
+                  </div>
+                  <div class="content-form-item">
+                    <label for="carname">E-mail:</label>
+                    <input class="content-form-input" type="text" name="carname" placeholder="serwis@serwis.pl" />
+                  </div>
+                  <div class="content-form-item">
+                    <label for="model">Tel:</label>
+                    <input class="content-form-input" type="text" name="model" placeholder="+48 111 222 333" />
+                  </div>
+                  <div class="content-form-item">
+                    <label for="service_date">Data wizyty</label>
+                    <input class="content-form-input" type="text" name="service_date" placeholder="31/03/2021" />
+                  </div>
+                  <div class="content-formbutton">
+                    <b>Wyślij</b>
+                </div>
+                </form>
+                
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   </div>
