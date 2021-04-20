@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <navbar/>
+      <navbar />
       <main>
         <section>
           <div class="baner">
@@ -43,7 +43,7 @@
                     <img class="content-img" src="/img/Content.jpg" alt="" />
                   </div>
                 </div>
-                <div class="content-col">
+                <div class="content-col content-col-flex">
                   <div class="content-description">
                     <h3>Dupa dupa jesteśmy fajni</h3>
                     <p>
@@ -72,8 +72,36 @@
             </div>
           </div>
         </section>
+        <section>
+          <div class="container">
+            <carousel
+              :perPageCustom="[
+                [1024, 3],
+                [768, 2],
+                [250, 1],
+              ]"
+              :autoplay="true"
+            >
+              <slide>
+                <img class="content-img" src="/img/galeria_1.jpg" alt="Galeria 1" />
+              </slide>
+              <slide>
+                <img class="content-img" src="/img/galeria_2.jpg" alt="Galeria 2" />
+              </slide>
+              <slide>
+                <img class="content-img" src="/img/galeria_3.jpg" alt="Galeria 3" />
+              </slide>
+              <slide>
+                <img class="content-img" src="/img/galeria_4.jpg" alt="Galeria 4" />
+              </slide>
+              <slide>
+                <img class="content-img" src="/img/galeria_5.jpg" alt="Galeria 5" />
+              </slide>
+            </carousel>
+          </div>
+        </section>
       </main>
-      <footer-comp/>
+      <footer-comp />
     </div>
   </div>
 </template>
@@ -82,6 +110,3 @@ export default {
   name: "Index",
 };
 </script>
-<style scoped>
-
-</style>

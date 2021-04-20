@@ -21,7 +21,9 @@ a, a:visited{
     text-decoration: none;
     color: inherit;
 }
-
+img{
+    max-width: 100%;
+}
 
 @import 'style/nav.css';
 @import 'style/index.css';

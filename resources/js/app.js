@@ -4,6 +4,8 @@ import Vue from 'vue'
 //Main pages
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
+import VueCarousel from 'vue-carousel';
+
 import App from './views/app.vue'
 import Dashboard from './views/Dashboard.vue'
 // import Form from './views/Form.vue'
@@ -11,6 +13,7 @@ import Index from './views/Index.vue'
 import Login from './views/Login.vue'
 import storeData from "./store/index"
 
+Vue.use(VueCarousel);
 Vue.use(Vuex);
 Vue.use(VueRouter);
 
