@@ -11,6 +11,7 @@ import Dashboard from './views/Dashboard.vue'
 // import Form from './views/Form.vue'
 import Index from './views/Index.vue'
 import Login from './views/Login.vue'
+import Register from './views/Register.vue'
 import storeData from "./store/index"
 
 Vue.use(VueCarousel);
@@ -19,8 +20,7 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
     mode: 'history',
-    routes: [
-        {
+    routes: [{
             path: '/',
             name: 'index',
             component: Index
@@ -40,11 +40,16 @@ const router = new VueRouter({
             name: 'login',
             component: Login,
         },
+        {
+            path: '/register',
+            name: 'register',
+            component: Register,
+        },
     ],
 });
 
 const store = new Vuex.Store(
-   storeData
+    storeData
 )
 Vue.prototype.$store = store
 

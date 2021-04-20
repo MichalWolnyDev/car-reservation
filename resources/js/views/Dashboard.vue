@@ -18,6 +18,17 @@
 import { mapGetters } from 'vuex';
     export default {
         name: 'Dashboard',
+        data(){
+            return {
+                user: null
+            }
+        },
+        mounted() {
+            axios.get('/api/user')
+            .then((res) => {
+                this.user = res.data
+            })
+        },
         computed: {
         ...mapGetters([
         'getReservations'
