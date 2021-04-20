@@ -12,6 +12,7 @@
                 <router-link :to="{ name: 'index' }">Strona główna</router-link>
                 |
                 <router-link :to="{ name: 'login' }">Zaloguj</router-link>
+                <router-link :to="{ name: 'register' }">Zarejestruj</router-link>
               </p>
             </div>
           </div>

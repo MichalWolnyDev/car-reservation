@@ -3,7 +3,10 @@
     <div class="container">
       <div>
         <div>
-          
+          <div class="form-item">
+            <label for="name">Nazwa:</label>
+            <input class="form-input" v-model="form.name" type="text" name="name" />
+          </div>
           <div class="form-item">
             <label for="email">Email:</label>
             <input class="form-input" v-model="form.email" type="email" name="email" />
@@ -13,8 +16,12 @@
             <input class="form-input" v-model="form.password" type="password" name="password" />
           </div>
           <div class="form-item">
-            <button @click.prevent="loginUser" type="submit">
-                Zaloguj
+            <label for="passwordconfirm">Powtórz hasło:</label>
+            <input class="form-input" v-model="form.password_confirmation" type="password" name="password_confirmation " />
+          </div>
+          <div class="form-item">
+            <button @click.prevent="saveForm" type="submit">
+                Zarejestruj
             </button>
           </div>
           
@@ -29,18 +36,20 @@ export default {
   data() {
     return {
         form: {
+            name: '',
             email: '',
             password: '',
+            password_confirmation: '',
         },
         errors: []
     };
   },
   methods: {
-      loginUser(){
-          axios.post('/api/login', this.form)
+      saveForm(){
+          axios.post('/api/register', this.form)
           .then(() => {
-              this.$router.push({name: "dashboard"})
-              console.log('zalogowano');
+
+              console.log('zarejestrowano');
           })
           .catch((err) => {
               this.errors = err.response.data.errors;
