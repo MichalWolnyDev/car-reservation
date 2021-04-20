@@ -1907,6 +1907,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Nav"
 });
@@ -1980,6 +1985,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -20922,16 +20967,31 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "nav-login" }, [
               _c(
-                "p",
+                "div",
+                { staticClass: "nav-mainsitebutton" },
                 [
                   _c("router-link", { attrs: { to: { name: "index" } } }, [
                     _vm._v("Strona główna")
-                  ]),
-                  _vm._v("\n              |\n              "),
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "nav-loginbutton" },
+                [
                   _c("router-link", { attrs: { to: { name: "login" } } }, [
                     _vm._v("Zaloguj")
-                  ]),
-                  _vm._v(" "),
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "nav-loginbutton" },
+                [
                   _c("router-link", { attrs: { to: { name: "register" } } }, [
                     _vm._v("Zarejestruj")
                   ])
@@ -21087,7 +21147,9 @@ var render = function() {
             ],
             1
           )
-        ])
+        ]),
+        _vm._v(" "),
+        _vm._m(2)
       ])
     ])
   ])
@@ -21164,6 +21226,105 @@ var staticRenderFns = [
                     "\n                    Interdum et malesuada fames ac ante ipsum primis in\n                    faucibus. Quisque feugiat convallis dui in lobortis.\n                    Aenean sagittis feugiat sapien vitae placerat. Sed sapien\n                    risus, pharetra non justo id, accumsan aliquam felis.\n                    Vestibulum ante ipsum primis in faucibus orci luctus et\n                    ultrices posuere cubilia curae; Nam imperdiet arcu eget\n                    odio viverra, eu congue metus vulputate. Donec varius non\n                    lacus id pulvinar. Aenean blandit rhoncus libero vitae\n                    bibendum.\n                  "
                   )
                 ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", [
+        _c("div", [
+          _c("div", [
+            _c("div", { staticClass: "content-formtext1" }, [
+              _c("h2", [_vm._v("Kontakt")]),
+              _c("br"),
+              _c("br")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "content-formtext2" }, [
+              _vm._v(
+                "\n                Jeśli chcesz się znami skontaktować lub umówić termin wizyty, wypełnij poniższy formularz. Nasz konsultat skontaktuje się z Tobą tak szybko jak to możliwe.\n              "
+              )
+            ]),
+            _vm._v(" "),
+            _c("form", { staticClass: "content-form" }, [
+              _c("div", { staticClass: "content-form-item" }, [
+                _c("label", { attrs: { for: "name" } }, [_vm._v("Imię:")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "content-form-input",
+                  attrs: {
+                    type: "text",
+                    name: "name",
+                    placeholder: "Imie/Name"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content-form-item" }, [
+                _c("label", { attrs: { for: "surname" } }, [
+                  _vm._v("Nazwisko:")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "content-form-input",
+                  attrs: {
+                    type: "text",
+                    name: "surname",
+                    placeholder: "Nazwisko/Surname"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content-form-item" }, [
+                _c("label", { attrs: { for: "carname" } }, [_vm._v("E-mail:")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "content-form-input",
+                  attrs: {
+                    type: "text",
+                    name: "carname",
+                    placeholder: "serwis@serwis.pl"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content-form-item" }, [
+                _c("label", { attrs: { for: "model" } }, [_vm._v("Tel:")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "content-form-input",
+                  attrs: {
+                    type: "text",
+                    name: "model",
+                    placeholder: "+48 111 222 333"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content-form-item" }, [
+                _c("label", { attrs: { for: "service_date" } }, [
+                  _vm._v("Data wizyty")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "content-form-input",
+                  attrs: {
+                    type: "text",
+                    name: "service_date",
+                    placeholder: "31/03/2021"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content-formbutton" }, [
+                _c("b", [_vm._v("Wyślij")])
               ])
             ])
           ])
