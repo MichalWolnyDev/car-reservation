@@ -1,7 +1,6 @@
 <template>
   <div>
     <div>
-      <navbar />
       <main>
         <section>
           <div class="baner">
@@ -101,7 +100,6 @@
           </div>
         </section>
       </main>
-      <footer-comp />
     </div>
   </div>
 </template>

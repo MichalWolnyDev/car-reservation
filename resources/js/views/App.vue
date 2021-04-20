@@ -1,20 +1,10 @@
 <template>
   <div>
-    
-
-    <!-- <div class="container">
-      <div>
-        <div class="nav">
-          <h1 class="nav-title">CRS</h1>
-        </div>
-        
-        <div class="content">
-        </div>
-      </div>
-    </div> -->
+    <navbar />
     <div>
       <router-view></router-view>
     </div>
+    <footer-comp />
   </div>
 </template>
 <script>

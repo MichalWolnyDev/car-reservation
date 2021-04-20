@@ -2073,8 +2073,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Index"
 });
@@ -2099,6 +2097,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Login'
 });
@@ -2116,16 +2116,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -20759,81 +20749,73 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c(
-      "div",
-      [
-        _c("navbar"),
+    _c("div", [
+      _c("main", [
+        _vm._m(0),
         _vm._v(" "),
-        _c("main", [
-          _vm._m(0),
-          _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _c("section", [
-            _c(
-              "div",
-              { staticClass: "container" },
-              [
-                _c(
-                  "carousel",
-                  {
-                    attrs: {
-                      perPageCustom: [
-                        [1024, 3],
-                        [768, 2],
-                        [250, 1]
-                      ],
-                      autoplay: true
-                    }
-                  },
-                  [
-                    _c("slide", [
-                      _c("img", {
-                        staticClass: "content-img",
-                        attrs: { src: "/img/galeria_1.jpg", alt: "Galeria 1" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("slide", [
-                      _c("img", {
-                        staticClass: "content-img",
-                        attrs: { src: "/img/galeria_2.jpg", alt: "Galeria 2" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("slide", [
-                      _c("img", {
-                        staticClass: "content-img",
-                        attrs: { src: "/img/galeria_3.jpg", alt: "Galeria 3" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("slide", [
-                      _c("img", {
-                        staticClass: "content-img",
-                        attrs: { src: "/img/galeria_4.jpg", alt: "Galeria 4" }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("slide", [
-                      _c("img", {
-                        staticClass: "content-img",
-                        attrs: { src: "/img/galeria_5.jpg", alt: "Galeria 5" }
-                      })
-                    ])
-                  ],
-                  1
-                )
-              ],
-              1
-            )
-          ])
-        ]),
+        _vm._m(1),
         _vm._v(" "),
-        _c("footer-comp")
-      ],
-      1
-    )
+        _c("section", [
+          _c(
+            "div",
+            { staticClass: "container" },
+            [
+              _c(
+                "carousel",
+                {
+                  attrs: {
+                    perPageCustom: [
+                      [1024, 3],
+                      [768, 2],
+                      [250, 1]
+                    ],
+                    autoplay: true
+                  }
+                },
+                [
+                  _c("slide", [
+                    _c("img", {
+                      staticClass: "content-img",
+                      attrs: { src: "/img/galeria_1.jpg", alt: "Galeria 1" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("slide", [
+                    _c("img", {
+                      staticClass: "content-img",
+                      attrs: { src: "/img/galeria_2.jpg", alt: "Galeria 2" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("slide", [
+                    _c("img", {
+                      staticClass: "content-img",
+                      attrs: { src: "/img/galeria_3.jpg", alt: "Galeria 3" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("slide", [
+                    _c("img", {
+                      staticClass: "content-img",
+                      attrs: { src: "/img/galeria_4.jpg", alt: "Galeria 4" }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("slide", [
+                    _c("img", {
+                      staticClass: "content-img",
+                      attrs: { src: "/img/galeria_5.jpg", alt: "Galeria 5" }
+                    })
+                  ])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ])
+      ])
+    ])
   ])
 }
 var staticRenderFns = [
@@ -20946,7 +20928,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("h2", { staticClass: "gowno" }, [_vm._v("\n        gówno\n   ")])
+      _c("div", { staticClass: "container" }, [
+        _c("h2", { staticClass: "gowno" }, [_vm._v("\n        gówno\n   ")])
+      ])
     ])
   }
 ]
@@ -20972,7 +20956,17 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("div", [_c("router-view")], 1)])
+  return _c(
+    "div",
+    [
+      _c("navbar"),
+      _vm._v(" "),
+      _c("div", [_c("router-view")], 1),
+      _vm._v(" "),
+      _c("footer-comp")
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

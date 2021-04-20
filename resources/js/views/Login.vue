@@ -1,8 +1,10 @@
 <template>
     <div>
-       <h2 class="gowno">
+       <div class="container">
+           <h2 class="gowno">
             gówno
        </h2>
+       </div>
     </div>
 </template>
 <script>
