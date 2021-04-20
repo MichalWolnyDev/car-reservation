@@ -1,0 +1,11 @@
+.footer-bg {
+    background-color: rgb(51, 49, 49);
+  }
+  .footer-address {
+    text-align: center;
+    padding: 2rem 0;
+    color: #fff;
+  }
+  .footer-title{
+      margin-bottom: 1rem;
+  }

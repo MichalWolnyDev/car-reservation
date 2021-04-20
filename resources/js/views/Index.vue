@@ -1,6 +1,7 @@
 <template>
   <div>
     <div>
+      <navbar/>
       <main>
         <section>
           <div class="baner">
@@ -72,24 +73,7 @@
           </div>
         </section>
       </main>
-      <footer>
-        <div class="footer-bg">
-          <div class="container">
-            <div class="footer-address">
-              <div>
-                <h4 class="footer-title">Wbijej do nas byczku</h4>
-                <p>ul. Dupowa 69 - 69-699 Poznań</p>
-                <p>
-                  <a href="tel:123123123">123123123</a>
-                </p>
-                <p>
-                  <a href="www.thirsty.pl" target="blank">www.thirsty.pl</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <footer-comp/>
     </div>
   </div>
 </template>
@@ -99,89 +83,5 @@ export default {
 };
 </script>
 <style scoped>
-.baner-relative {
-  position: relative;
-}
-.baner-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.baner-text {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
-}
 
-.baner-img {
-  width: 100%;
-}
-
-.text-center {
-  text-align: center;
-}
-.content{
-    margin-bottom: 2rem;
-}
-
-.content-hello {
-  padding: 2rem 0;
-}
-.content-hello-text {
-  padding-top: 1rem;
-}
-.content-row {
-  display: flex;
-  align-items: center;
-}
-.content-description {
-  padding-left: 2rem;
-}
-.footer-bg {
-  background-color: rgb(51, 49, 49);
-}
-.footer-address {
-  text-align: center;
-  padding: 2rem 0;
-  color: #fff;
-}
-.footer-title{
-    margin-bottom: 1rem;
-}
-@media(max-width: 960px){
-      .content-img{
-      max-width: 100%;
-    }
-    .content-row{
-        display: block;
-    }
-    .content-description{
-        padding: 1rem;
-    }
-}
-@media (max-width: 768px) {
-  .baner-overlay {
-    display: none;
-  }
-  .baner-text {
-    position: relative;
-    top: 0;
-    color: #000;
-    padding: 1rem;
-    transform: none;
-  }
-}
-@media (max-width: 550px) {
-  .baner-text {
-    font-size: 1rem;
-  }
-}
 </style>

@@ -45,6 +45,9 @@ const store = new Vuex.Store(
 )
 Vue.prototype.$store = store
 
+Vue.component('navbar', require('./components/Nav.vue').default);
+Vue.component('footer-comp', require('./components/Footer.vue').default);
+
 const app = new Vue({
     el: '#app',
     components: { App },

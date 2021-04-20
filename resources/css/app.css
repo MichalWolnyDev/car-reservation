@@ -24,5 +24,7 @@ a, a:visited{
 
 
 @import 'style/nav.css';
+@import 'style/index.css';
 @import 'style/form.css';
+@import 'style/footer.css';
 @import 'style/mediaqueries.css';
