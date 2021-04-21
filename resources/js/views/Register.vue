@@ -1,27 +1,27 @@
 <template>
   <div>
     <div class="container">
-      <div>
-        <div>
-          <div class="form-item">
+      <div class="login-window">
+        <div class="login-registerform">
+          <div class="login-registerform-item">
             <label for="name">Nazwa:</label>
-            <input class="form-input" v-model="form.name" type="text" name="name" />
+            <input class="login-registerform-input" v-model="form.name" type="text" name="name" />
           </div>
-          <div class="form-item">
+          <div class="login-registerform-item">
             <label for="email">Email:</label>
-            <input class="form-input" v-model="form.email" type="email" name="email" />
+            <input class="login-registerform-input" v-model="form.email" type="email" name="email" />
           </div>
-          <div class="form-item">
+          <div class="login-registerform-item">
             <label for="password">Hasło:</label>
-            <input class="form-input" v-model="form.password" type="password" name="password" />
+            <input class="login-registerform-input" v-model="form.password" type="password" name="password" />
           </div>
-          <div class="form-item">
+          <div class="login-registerform-item">
             <label for="passwordconfirm">Powtórz hasło:</label>
-            <input class="form-input" v-model="form.password_confirmation" type="password" name="password_confirmation " />
+            <input class="login-registerform-input" v-model="form.password_confirmation" type="password" name="password_confirmation " />
           </div>
-          <div class="form-item">
-            <button @click.prevent="saveForm" type="submit">
-                Zarejestruj
+          <div class="login-registerform-button">
+            <button class="login-formbutton" @click.prevent="saveForm" type="submit">
+                <b>Zarejestruj</b> 
             </button>
           </div>
           

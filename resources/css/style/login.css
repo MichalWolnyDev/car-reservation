@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
+    
     
 }
 .login-form{
@@ -12,29 +14,25 @@ align-content: space-around;
 border:2px solid black;
 justify-content: center;
 align-items: center;
+text-align: center;
 margin-top: 100px;
 background-color: rgb(219, 219, 219);
+flex-basis: 400px;
+max-width: 100%;
 }
 .login-form-item{
     display: flex;
-    margin:6px 5px ;
+    margin-top: 5px;
+    max-width: 100%;
+  
 }
 .login-form-input{
-    flex: 1;
+    flex: 1 1;
     display: flex;
-    padding:5px 5px ;
+    padding:5px 20px ;
     border:1px solid black;
     max-width: 100%;
-}
-.login-buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 100px;
-}
-.login-formbutton{
-    display: flex;
-    max-width: fit-content;
+    
 }
 .login-formbutton{
     display: flex;
@@ -45,9 +43,50 @@ background-color: rgb(219, 219, 219);
     background-color: lightgray;
     color: black;
     margin-top: 10px;
+    max-width: 100%;
 }
 
 .login-formbutton:active{
     transform: translateY(4px);
     background-color: gray;
 }
+.login-registerform{
+    display: flex;
+    padding:20px 20px ;
+    flex-wrap: wrap;
+    border:2px solid black;
+    margin-top: 100px;
+    background-color: rgb(219, 219, 219) ;
+    flex-basis: 400px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center ;
+    }
+    .login-registerlabel{
+        display: flex;
+        max-width: 35%;
+    }
+    .login-registerform-input{
+        flex: 1 1;
+        display: flex;
+        padding:5px 20px ;
+        border:1px solid black;
+        max-width: 65%;
+        
+    }
+    .login-registerform-item{
+        display: flex;
+        margin-top: 5px;
+        max-width: 100%;
+        flex:0 1 100%;
+        justify-content: space-between;
+      
+    }
+    .login-registerform-button{
+        display: flex;
+        margin-top: 5px;
+        max-width: 100%;
+        flex:0 1 100%;
+        justify-content: center;
+      
+    }
