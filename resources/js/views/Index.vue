@@ -130,10 +130,13 @@
                     <label for="service_date">Data wizyty</label>
                     <input class="content-form-input" type="text" name="service_date" placeholder="31/03/2021" />
                   </div>
-                  <div class="content-formbutton">
-                    <b>Wyślij</b>
-                </div>
+                  <div class="content-buttonplace">
+                    <div class="content-formbutton">
+                      <b>Wyślij</b>
+                    </div>
+                  </div>
                 </form>
+                
                 
               </div>
             </div>
