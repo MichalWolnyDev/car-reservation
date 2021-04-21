@@ -34,6 +34,13 @@ const router = new VueRouter({
             path: '/dashboard',
             name: 'dashboard',
             component: Dashboard,
+            beforeEnter: (to, form, next) => {
+                axios.get('/api/authenticated').then(() => {
+                    next()
+                }).catch(() => {
+                    return next({ name: 'login' })
+                })
+            }
         },
         {
             path: '/login',

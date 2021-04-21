@@ -1952,25 +1952,38 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_defineProperty({
-  name: 'Dashboard',
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Dashboard",
   data: function data() {
     return {
       user: null
     };
   },
-  mounted: function mounted() {
-    var _this = this;
+  methods: {
+    logout: function logout() {
+      var _this = this;
 
-    axios.get('/api/user').then(function (res) {
-      _this.user = res.data;
-    });
+      axios.post("/api/logout").then(function () {
+        _this.$router.push({
+          name: "login"
+        });
+      });
+    }
   },
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)(['getReservations']))
-}, "mounted", function mounted() {
-  this.$store.dispatch('allCategoryFromDatabase');
-}));
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)(["getReservations"])),
+  mounted: function mounted() {
+    var _this2 = this;
+
+    this.$store.dispatch("allCategoryFromDatabase");
+    axios.get("/api/user").then(function (res) {
+      _this2.user = res.data;
+    });
+  }
+});
 
 /***/ }),
 
@@ -2172,13 +2185,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Login",
   data: function data() {
     return {
       form: {
-        email: '',
-        password: ''
+        email: "",
+        password: ""
       },
       errors: []
     };
@@ -2187,12 +2206,12 @@ __webpack_require__.r(__webpack_exports__);
     loginUser: function loginUser() {
       var _this = this;
 
-      axios.post('/api/login', this.form).then(function () {
+      axios.post("/api/login", this.form).then(function () {
         _this.$router.push({
           name: "dashboard"
         });
 
-        console.log('zalogowano');
+        console.log("zalogowano");
       })["catch"](function (err) {
         _this.errors = err.response.data.errors;
       });
@@ -2353,7 +2372,16 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_9__.default({
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: _views_Dashboard_vue__WEBPACK_IMPORTED_MODULE_2__.default
+    component: _views_Dashboard_vue__WEBPACK_IMPORTED_MODULE_2__.default,
+    beforeEnter: function beforeEnter(to, form, next) {
+      axios.get('/api/authenticated').then(function () {
+        next();
+      })["catch"](function () {
+        return next({
+          name: 'login'
+        });
+      });
+    }
   }, {
     path: '/login',
     name: 'login',
@@ -2393,6 +2421,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.withCredentials = true;
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -21041,18 +21070,38 @@ var render = function() {
     _c("div", [
       _c("div", [
         _c("div", [
+          _vm._v(
+            "\n        Nazwa użytkownika: " +
+              _vm._s(_vm.user.name) +
+              "\n                  Email: " +
+              _vm._s(_vm.user.email) +
+              "\n        "
+          ),
           _c(
             "ul",
             _vm._l(_vm.getReservations, function(item) {
               return _c("li", { key: item.id }, [
                 _vm._v(
-                  ">\n                      " +
+                  "\n            >\n            " +
                     _vm._s(item) +
-                    "\n                    "
+                    "\n          "
                 )
               ])
             }),
             0
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  return _vm.logout($event)
+                }
+              }
+            },
+            [_vm._v("Wyloguj")]
           )
         ])
       ])
@@ -21423,7 +21472,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n              Zaloguj\n          ")]
+              [_vm._v("Zaloguj")]
             )
           ])
         ])

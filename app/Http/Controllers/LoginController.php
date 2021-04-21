@@ -21,4 +21,8 @@ class LoginController extends Controller
             'email' => ['Niepoprawne dane']
         ]);
     }
+    public function logout()
+    {
+        Auth::logout();
+    }
 }
