@@ -1912,6 +1912,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Nav"
 });
@@ -21066,39 +21068,54 @@ var render = function() {
     _c("nav", [
       _c("div", [
         _c("div", [
-          _c("div", { staticClass: "nav-header" }, [
+          _c("div", { staticClass: "nav-header shadow" }, [
             _vm._m(0),
             _vm._v(" "),
             _c("div", { staticClass: "nav-login" }, [
               _c(
                 "div",
-                { staticClass: "nav-mainsitebutton" },
+                { staticClass: "nav-button" },
                 [
-                  _c("router-link", { attrs: { to: { name: "index" } } }, [
-                    _vm._v("Strona główna")
-                  ])
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { to: { name: "index" } }
+                    },
+                    [_vm._v("Strona główna")]
+                  )
                 ],
                 1
               ),
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "nav-loginbutton" },
+                { staticClass: "nav-button" },
                 [
-                  _c("router-link", { attrs: { to: { name: "login" } } }, [
-                    _vm._v("Zaloguj")
-                  ])
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { to: { name: "login" } }
+                    },
+                    [_vm._v("Zaloguj")]
+                  )
                 ],
                 1
               ),
               _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "nav-loginbutton" },
+                { staticClass: "nav-button" },
                 [
-                  _c("router-link", { attrs: { to: { name: "register" } } }, [
-                    _vm._v("Zarejestruj")
-                  ])
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { to: { name: "register" } }
+                    },
+                    [_vm._v("Zarejestruj")]
+                  )
                 ],
                 1
               )
@@ -21115,7 +21132,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "nav-logo" }, [
-      _c("img", { attrs: { src: "/img/Logo.jpg", alt: "NO IMG" } })
+      _c("a", { attrs: { href: "/" } }, [
+        _c("img", {
+          attrs: { src: "/img/Logo.jpg", alt: "Car Reservation System" }
+        })
+      ])
     ])
   }
 ]

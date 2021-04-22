@@ -3,20 +3,22 @@
     <nav>
       <div>
         <div>
-          <div class="nav-header">
+          <div class="nav-header shadow">
             <div class="nav-logo">
-              <img src="/img/Logo.jpg" alt="NO IMG" />
+              <a href="/">
+                <img src="/img/Logo.jpg" alt="Car Reservation System" />
+              </a>
             </div>
             <div class="nav-login">
               
-                <div class="nav-mainsitebutton">
-                  <router-link :to="{ name: 'index' }">Strona główna</router-link>
+                <div class="nav-button">
+                  <router-link class="nav-link" :to="{ name: 'index' }">Strona główna</router-link>
                 </div>
-                <div class="nav-loginbutton">
-                  <router-link :to="{ name: 'login' }">Zaloguj</router-link>
+                <div class="nav-button">
+                  <router-link class="nav-link" :to="{ name: 'login' }">Zaloguj</router-link>
                 </div>
-                <div class="nav-loginbutton">
-                   <router-link :to="{ name: 'register' }">Zarejestruj</router-link>
+                <div class="nav-button">
+                   <router-link class="nav-link" :to="{ name: 'register' }">Zarejestruj</router-link>
                 </div>
              
             </div>

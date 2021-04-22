@@ -1,27 +1,35 @@
-*,::after,::before{
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     height: 100%;
     width: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Roboto, sans-serif;
 }
-#app{
+
+#app {
     min-height: 100%;
 }
-.container{
+
+.container {
     max-width: 1440px;
     margin: 0 auto;
 }
 
-a, a:visited{
+a,
+a:visited {
     text-decoration: none;
     color: inherit;
 }
-img{
+
+img {
     max-width: 100%;
 }
 
