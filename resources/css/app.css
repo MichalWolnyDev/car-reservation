@@ -33,6 +33,10 @@ img {
     max-width: 100%;
 }
 
+.text-center {
+    text-align: center;
+}
+
 @import 'style/nav.css';
 @import 'style/index.css';
 @import 'style/form.css';

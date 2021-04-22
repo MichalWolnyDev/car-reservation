@@ -2197,8 +2197,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Login",
   data: function data() {
@@ -2272,15 +2270,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Login",
   data: function data() {
     return {
       form: {
-        name: '',
-        email: '',
-        password: '',
-        password_confirmation: ''
+        name: "",
+        email: "",
+        password: "",
+        password_confirmation: ""
       },
       errors: []
     };
@@ -2289,8 +2310,8 @@ __webpack_require__.r(__webpack_exports__);
     saveForm: function saveForm() {
       var _this = this;
 
-      axios.post('/api/register', this.form).then(function () {
-        console.log('zarejestrowano');
+      axios.post("/api/register", this.form).then(function () {
+        console.log("zarejestrowano");
       })["catch"](function (err) {
         _this.errors = err.response.data.errors;
       });
@@ -21518,11 +21539,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "login-window" }, [
-        _c("div", { staticClass: "login-form" }, [
-          _c("div", { staticClass: "login-form-item" }, [
-            _c("label", { attrs: { for: "email" } }, [_vm._v("Email:")]),
-            _vm._v(" "),
+      _c("div", { staticClass: "user-form-window" }, [
+        _c("div", { staticClass: "user-form shadow" }, [
+          _c("div", { staticClass: "user-form-item" }, [
             _c("input", {
               directives: [
                 {
@@ -21532,11 +21551,11 @@ var render = function() {
                   expression: "form.email"
                 }
               ],
-              staticClass: "login-form-input",
+              staticClass: "user-form-input",
               attrs: {
                 type: "email",
                 name: "email",
-                placeholder: "Serwis@email.pl"
+                placeholder: "Wpisz adres e-mail"
               },
               domProps: { value: _vm.form.email },
               on: {
@@ -21550,9 +21569,7 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "login-form-item" }, [
-            _c("label", { attrs: { for: "password" } }, [_vm._v("Hasło:")]),
-            _vm._v(" "),
+          _c("div", { staticClass: "user-form-item" }, [
             _c("input", {
               directives: [
                 {
@@ -21562,11 +21579,11 @@ var render = function() {
                   expression: "form.password"
                 }
               ],
-              staticClass: "login-form-input",
+              staticClass: "user-form-input",
               attrs: {
                 type: "password",
                 name: "password",
-                placeholder: "Hasło/Password"
+                placeholder: "Podaj hasło"
               },
               domProps: { value: _vm.form.password },
               on: {
@@ -21580,11 +21597,11 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "login-form-item" }, [
+          _c("div", { staticClass: "user-form-item text-center" }, [
             _c(
               "button",
               {
-                staticClass: "login-formbutton",
+                staticClass: "user-formbutton",
                 attrs: { type: "submit" },
                 on: {
                   click: function($event) {
@@ -21593,7 +21610,7 @@ var render = function() {
                   }
                 }
               },
-              [_c("b", [_vm._v("Zaloguj")])]
+              [_vm._v("\n             Zaloguj\n          ")]
             )
           ])
         ])
@@ -21626,11 +21643,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "login-window" }, [
-        _c("div", { staticClass: "login-registerform" }, [
-          _c("div", { staticClass: "login-registerform-item" }, [
-            _c("label", { attrs: { for: "name" } }, [_vm._v("Nazwa:")]),
-            _vm._v(" "),
+      _c("div", { staticClass: "user-form-window" }, [
+        _c("div", { staticClass: "user-form shadow" }, [
+          _c("div", { staticClass: "user-form-item" }, [
             _c("input", {
               directives: [
                 {
@@ -21640,8 +21655,8 @@ var render = function() {
                   expression: "form.name"
                 }
               ],
-              staticClass: "login-registerform-input",
-              attrs: { type: "text", name: "name" },
+              staticClass: "user-form-input",
+              attrs: { type: "text", name: "name", placeholder: "Podaj nick" },
               domProps: { value: _vm.form.name },
               on: {
                 input: function($event) {
@@ -21654,9 +21669,7 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "login-registerform-item" }, [
-            _c("label", { attrs: { for: "email" } }, [_vm._v("Email:")]),
-            _vm._v(" "),
+          _c("div", { staticClass: "user-form-item" }, [
             _c("input", {
               directives: [
                 {
@@ -21666,8 +21679,12 @@ var render = function() {
                   expression: "form.email"
                 }
               ],
-              staticClass: "login-registerform-input",
-              attrs: { type: "email", name: "email" },
+              staticClass: "user-form-input",
+              attrs: {
+                type: "email",
+                name: "email",
+                placeholder: "Wpisz adres e-mail"
+              },
               domProps: { value: _vm.form.email },
               on: {
                 input: function($event) {
@@ -21680,9 +21697,7 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "login-registerform-item" }, [
-            _c("label", { attrs: { for: "password" } }, [_vm._v("Hasło:")]),
-            _vm._v(" "),
+          _c("div", { staticClass: "user-form-item" }, [
             _c("input", {
               directives: [
                 {
@@ -21692,8 +21707,12 @@ var render = function() {
                   expression: "form.password"
                 }
               ],
-              staticClass: "login-registerform-input",
-              attrs: { type: "password", name: "password" },
+              staticClass: "user-form-input",
+              attrs: {
+                type: "password",
+                name: "password",
+                placeholder: "Podaj hasło"
+              },
               domProps: { value: _vm.form.password },
               on: {
                 input: function($event) {
@@ -21706,11 +21725,7 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "login-registerform-item" }, [
-            _c("label", { attrs: { for: "passwordconfirm" } }, [
-              _vm._v("Powtórz hasło:")
-            ]),
-            _vm._v(" "),
+          _c("div", { staticClass: "user-form-item" }, [
             _c("input", {
               directives: [
                 {
@@ -21720,8 +21735,12 @@ var render = function() {
                   expression: "form.password_confirmation"
                 }
               ],
-              staticClass: "login-registerform-input",
-              attrs: { type: "password", name: "password_confirmation " },
+              staticClass: "user-form-input",
+              attrs: {
+                type: "password",
+                name: "password_confirmation",
+                placeholder: "Powtórz hasło"
+              },
               domProps: { value: _vm.form.password_confirmation },
               on: {
                 input: function($event) {
@@ -21738,11 +21757,11 @@ var render = function() {
             })
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "login-registerform-button" }, [
+          _c("div", { staticClass: "user-form-item text-center" }, [
             _c(
               "button",
               {
-                staticClass: "login-formbutton",
+                staticClass: "user-formbutton",
                 attrs: { type: "submit" },
                 on: {
                   click: function($event) {
@@ -21751,7 +21770,7 @@ var render = function() {
                   }
                 }
               },
-              [_c("b", [_vm._v("Zarejestruj")])]
+              [_vm._v("\n            Zarejestruj\n          ")]
             )
           ])
         ])

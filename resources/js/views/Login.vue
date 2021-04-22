@@ -1,20 +1,18 @@
 <template>
   <div>
     <div class="container">
-      <div class="login-window">
-        <div class="login-form">
+      <div class="user-form-window">
+        <div class="user-form shadow">
 
-          <div class="login-form-item">
-            <label for="email">Email:</label>
-            <input class="login-form-input" v-model="form.email" type="email" name="email" placeholder="Serwis@email.pl" />
+          <div class="user-form-item">
+            <input class="user-form-input" v-model="form.email" type="email" name="email" placeholder="Wpisz adres e-mail" />
           </div>
-          <div class="login-form-item">
-            <label for="password">Hasło:</label>
-            <input class="login-form-input" v-model="form.password" type="password" name="password" placeholder="Hasło/Password" />
+          <div class="user-form-item">
+            <input class="user-form-input" v-model="form.password" type="password" name="password" placeholder="Podaj hasło" />
           </div>
-          <div class="login-form-item">
-            <button class="login-formbutton" @click.prevent="loginUser" type="submit">
-               <b>Zaloguj</b> 
+          <div class="user-form-item text-center">
+            <button class="user-formbutton" @click.prevent="loginUser" type="submit">
+               Zaloguj
             </button>
           </div>
 
