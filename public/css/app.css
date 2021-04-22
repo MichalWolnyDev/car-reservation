@@ -370,10 +370,30 @@ a.router-link-exact-active.router-link-active {
     min-width: 80%;
 }
 
-.dashboard-nav li {
+.dashboard-link {
+    display: block;
     padding: 1rem 0;
     border-bottom: 1px solid #565656;
-    cursor: pointer;
+    transition: border-bottom .3s ease-in-out;
+    font-weight: 200;
+}
+
+.dashboard-link:hover {
+    border-bottom: 1px solid #48576d;
+}
+
+.dashboard-nav a.router-link-exact-active.router-link-active {
+    border-bottom: 1px solid #48576d;
+    font-weight: 400;
+}
+
+.dashboard-content {
+    padding: 50px 0;
+}
+
+.dashboard-view {
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 @media(max-width: 960px) {

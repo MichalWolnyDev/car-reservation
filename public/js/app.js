@@ -2045,6 +2045,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Dashboard",
   data: function data() {
@@ -21461,7 +21463,7 @@ var render = function() {
                 _c(
                   "router-link",
                   {
-                    staticClass: "nav-link",
+                    staticClass: "dashboard-link",
                     attrs: { to: { name: "profile" } }
                   },
                   [_vm._v("Profil")]
@@ -21476,7 +21478,7 @@ var render = function() {
                 _c(
                   "router-link",
                   {
-                    staticClass: "nav-link",
+                    staticClass: "dashboard-link",
                     attrs: { to: { name: "booked" } }
                   },
                   [_vm._v("Zarezerwowane terminy")]
@@ -21487,7 +21489,9 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "dashboard-content" }, [_c("router-view")], 1),
+        _c("div", { staticClass: "dashboard-content" }, [
+          _c("div", { staticClass: "dashboard-view" }, [_c("router-view")], 1)
+        ]),
         _vm._v(" "),
         _c("div")
       ])

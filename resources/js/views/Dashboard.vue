@@ -5,16 +5,18 @@
         <div class="dashboard-menu">
           <ul class="dashboard-nav">
             <li>
-              <router-link class="nav-link" :to="{ name: 'profile' }">Profil</router-link>
+              <router-link class="dashboard-link" :to="{ name: 'profile' }">Profil</router-link>
             </li>
             <li>
-              <router-link class="nav-link" :to="{ name: 'booked' }">Zarezerwowane terminy</router-link>
+              <router-link class="dashboard-link" :to="{ name: 'booked' }">Zarezerwowane terminy</router-link>
             </li>
           
           </ul>
         </div>
         <div class="dashboard-content">
-          <router-view/>
+          <div class="dashboard-view">
+            <router-view/>
+          </div>
         </div>
         <div></div>
       </div>
