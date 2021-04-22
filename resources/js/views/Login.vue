@@ -38,7 +38,7 @@ export default {
       axios
         .post("/api/login", this.form)
         .then(() => {
-          this.$router.push({ name: "dashboard" });
+          this.$router.push({ name: "profile" });
           console.log("zalogowano");
         })
         .catch((err) => {

@@ -42,6 +42,10 @@
     font-weight: 200;
 }
 
+.nav-link.pointer {
+    cursor: pointer;
+}
+
 .nav-link:hover {
     border-bottom: 1px solid #48576d;
 }

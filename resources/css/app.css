@@ -47,9 +47,18 @@ img {
     text-align: center;
 }
 
+[v-cloak]>* {
+    display: none
+}
+
+[v-cloak]::before {
+    content: "loading…"
+}
+
 @import 'style/nav.css';
 @import 'style/index.css';
 @import 'style/form.css';
 @import 'style/footer.css';
 @import 'style/mediaqueries.css';
 @import 'style/login.css';
+@import 'style/dashboard.css';

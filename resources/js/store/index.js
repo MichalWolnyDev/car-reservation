@@ -1,40 +1,56 @@
+import router from '../app.js'
+
+
 export default {
 
-	state: {
+    state: {
 
-        reservations: []
+        reservations: [],
+        userInfo: null
 
-	},
+    },
 
-	getters: {
+    getters: {
 
-       getReservations(state){ //take parameter state
+        getReservations(state) { //take parameter state
 
-          return state.reservations
-       }
-	},
+            return state.reservations
+        },
+        getUserInfo(state) { //take parameter state
 
-	actions: {
-       allCategoryFromDatabase(context){
-          axios.get("api/reservations")
+            return state.userInfo
+        }
+    },
 
-               .then((response)=>{
-                  console.log(response.data)
-                  context.commit("reservations",response.data) //reservations will be run from mutation
+    actions: {
+        allCategoryFromDatabase(context) {
+            axios.get("/api/reservations")
+                .then((response) => {
+                    console.log(response.data)
+                    context.commit("reservations", response.data) //reservations will be run from mutation
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+        },
+        userInfoRequest(context) {
+            axios.get("/api/user")
+                .then((res) => {
+                    context.commit("setUserInfo", res.data)
+                });
+        },
+        clearUserInfo(context) {
+            context.commit("setUserInfo", null)
+        }
 
-               })
+    },
 
-               .catch(()=>{
-                  
-                  console.log("Error........")
-                  
-               })
-       }
-	},
-
-	mutations: {
-       reservations(state,data) {
-          return state.reservations = data
-       }
-	}
+    mutations: {
+        reservations(state, data) {
+            return state.reservations = data
+        },
+        setUserInfo(state, data) {
+            return state.userInfo = data
+        }
+    }
 }

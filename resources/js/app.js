@@ -12,6 +12,8 @@ import Dashboard from './views/Dashboard.vue'
 import Index from './views/Index.vue'
 import Login from './views/Login.vue'
 import Register from './views/Register.vue'
+import DashboardProfile from './dashboardViews/Profile.vue'
+import DashboardBooked from './dashboardViews/Booked.vue'
 import storeData from "./store/index"
 
 Vue.use(VueCarousel);
@@ -34,6 +36,17 @@ const router = new VueRouter({
             path: '/dashboard',
             name: 'dashboard',
             component: Dashboard,
+            children: [{
+                    path: '/dashboard/profile',
+                    name: 'profile',
+                    component: DashboardProfile
+                },
+                {
+                    path: '/dashboard/booked',
+                    name: 'booked',
+                    component: DashboardBooked
+                }
+            ],
             beforeEnter: (to, form, next) => {
                 axios.get('/api/authenticated').then(() => {
                     next()
