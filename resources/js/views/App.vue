@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="container-flex">
     <navbar />
-    <div>
+    <div class="container-view">
       <router-view></router-view>
     </div>
     <footer-comp />

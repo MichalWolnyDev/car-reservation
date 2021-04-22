@@ -21803,10 +21803,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "container-flex" },
     [
       _c("navbar"),
       _vm._v(" "),
-      _c("div", [_c("router-view")], 1),
+      _c("div", { staticClass: "container-view" }, [_c("router-view")], 1),
       _vm._v(" "),
       _c("footer-comp")
     ],
