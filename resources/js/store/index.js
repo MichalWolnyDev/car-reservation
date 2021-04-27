@@ -6,7 +6,8 @@ export default {
     state: {
 
         reservations: [],
-        userInfo: null
+        userInfo: null,
+        isReservations: false
 
     },
 
@@ -19,19 +20,29 @@ export default {
         getUserInfo(state) { //take parameter state
 
             return state.userInfo
+        },
+        getReservationsState(state) {
+            return state.isReservations;
         }
     },
 
     actions: {
         allCategoryFromDatabase(context) {
+            var that = this;
             axios.get("/api/reservations")
                 .then((response) => {
                     console.log(response.data)
                     context.commit("reservations", response.data) //reservations will be run from mutation
+                    if (response.data.length > 0) {
+                        setTimeout(() => {
+                            context.commit("setReservationsState", true)
+                        }, 2000);
+                    }
                 })
                 .catch((err) => {
                     console.log(err)
                 })
+
         },
         userInfoRequest(context) {
             axios.get("/api/user")
@@ -51,6 +62,9 @@ export default {
         },
         setUserInfo(state, data) {
             return state.userInfo = data
+        },
+        setReservationsState(state, data) {
+            return state.isReservations = data
         }
     }
 }
