@@ -74,7 +74,7 @@
               <div class="booked-item">
                 {{ item.date }}
               </div>
-              <div class="booked-item">
+              <div class="booked-item" @click="deleteItem(item.id)">
                 <i>
                   <svg class="booked-delete" viewBox="-40 0 427 427.00131">
                     <path
@@ -109,6 +109,19 @@ export default {
   computed: {
     ...mapGetters(["getReservations", "getReservationsState"]),
   },
+  methods: {
+    deleteItem(id){
+        axios
+        .delete("/api/reservations/"+ id)
+        .then(() => {
+          console.log("usunięto "+id);
+          this.$store.dispatch("allCategoryFromDatabase");
+        })
+        .catch((err) => {
+          this.errors = err.response.data.errors;
+        });
+    }
+  }
 };
 </script>
 <style scoped>

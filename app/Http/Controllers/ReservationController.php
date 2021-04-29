@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use App\Models\Reservations;
+use Illuminate\Support\Facades\Validator;
 
 class ReservationController extends Controller
 {
@@ -28,19 +30,31 @@ class ReservationController extends Controller
     {
         // validate the data
         // $validator = $request->validate([
-        //     'name'=>'required',
-        //     'surname'=>'required',
-        //     'car'=>'required',
-        //     'model'=>'required',
-        //     'year'=>'required',
-        //     'date'=>'required'
-        // ]);
+        $validator = Validator::make($request->all(), [
+            'name'=> 'required',
+            'surname'=> 'required',
+            'car'=> 'required',
+            'model'=> 'required',
+            'year'=> 'required|digits:4|integer|min:1900|max:'.(date('Y')+1),
+            'date'=> 'date_format:Y-m-d',
+            'email' => 'email:rfc,dns',
+            'phone' => 'required|digits:9'
+        ]);
 
-        // if ($validator->fails()) {    
+        if ($validator->fails()) {    
+            return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
+        } else {
+        //create a reservation
+        return Reservations::create($request->all());
+
+
+        }
+
+        // if ($validator){
+
+        // } else{
         //     return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);
         // }
-        // create a reservation
-        return Reservations::create($request->all());
     }
 
     /**

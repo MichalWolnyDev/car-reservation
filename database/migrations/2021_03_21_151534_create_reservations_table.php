@@ -22,6 +22,8 @@ class CreateReservationsTable extends Migration
             $table->string('model');
             $table->integer('year');
             $table->date('date');
+            $table->string('email');
+            $table->integer('phone');
             $table->timestamps();
         });
     }

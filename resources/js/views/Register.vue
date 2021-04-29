@@ -73,6 +73,7 @@ export default {
         .post("/api/register", this.form)
         .then(() => {
           console.log("zarejestrowano");
+          this.$router.push({ name: "profile" });
         })
         .catch((err) => {
           this.errors = err.response.data.errors;

@@ -15,6 +15,8 @@ class Reservations extends Model
         'car',
         'model',
         'year',
+        'email',
+        'phone',
         'date'
     ];
 }
