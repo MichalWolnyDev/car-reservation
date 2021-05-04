@@ -12,10 +12,16 @@
             wypełnij poniższy formularz. Nasz konsultat skontaktuje się z Tobą
             tak szybko jak to możliwe.
           </div>
-          <form class="form-main">
+          <div v-if="!message">
+<form class="form-main">
             <div class="user-form-flex">
               <div class="user-form-item">
                 <label for="name">Imię:</label>
+                <div v-if="errors.name">
+                  <small class="user-form-error">
+                    {{ errors.name[0] }}
+                  </small>
+                </div>
                 <input
                   class="user-form-input"
                   type="text"
@@ -26,6 +32,11 @@
               </div>
               <div class="user-form-item">
                 <label for="surname">Nazwisko:</label>
+                <div v-if="errors.surname">
+                  <small class="user-form-error">
+                    {{ errors.surname[0] }}
+                  </small>
+                </div>
                 <input
                   class="user-form-input"
                   type="text"
@@ -36,6 +47,11 @@
               </div>
               <div class="user-form-item">
                 <label for="car">Marka:</label>
+                <div v-if="errors.car">
+                  <small class="user-form-error">
+                    {{ errors.car[0] }}
+                  </small>
+                </div>
                 <input
                   class="user-form-input"
                   type="text"
@@ -46,6 +62,11 @@
               </div>
               <div class="user-form-item">
                 <label for="model">Model:</label>
+                <div v-if="errors.surname">
+                  <small class="user-form-error">
+                    {{ errors.surname[0] }}
+                  </small>
+                </div>
                 <input
                   class="user-form-input"
                   type="text"
@@ -56,6 +77,11 @@
               </div>
               <div class="user-form-item">
                 <label for="prod_year">Rok produkcji:</label>
+                <div v-if="errors.year">
+                  <small class="user-form-error">
+                    {{ errors.year[0] }}
+                  </small>
+                </div>
                 <input
                   class="user-form-input"
                   type="text"
@@ -66,6 +92,11 @@
               </div>
               <div class="user-form-item">
                 <label for="email">E-mail:</label>
+                <div v-if="errors.email">
+                  <small class="user-form-error">
+                    {{ errors.email[0] }}
+                  </small>
+                </div>
                 <input
                   class="user-form-input"
                   type="text"
@@ -76,6 +107,11 @@
               </div>
               <div class="user-form-item">
                 <label for="phone_nr">Tel:</label>
+                <div v-if="errors.phone">
+                  <small class="user-form-error">
+                    {{ errors.phone[0] }}
+                  </small>
+                </div>
                 <input
                   class="user-form-input"
                   type="tel"
@@ -86,6 +122,11 @@
               </div>
               <div class="user-form-item">
                 <label for="service_date">Data wizyty</label>
+                <div v-if="errors.date">
+                  <small class="user-form-error">
+                    {{ errors.date[0] }}
+                  </small>
+                </div>
                 <input
                   class="user-form-input"
                   type="date"
@@ -104,6 +145,15 @@
               </button>
             </div>
           </form>
+          </div>
+          <div v-else>
+            <h2>
+              Dziękujemy za wysłanie zgłoszenia!
+            </h2>
+            <p>
+              Nasz doradca wkrótce się z państwem skontaktuje.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -122,26 +172,30 @@ export default {
         date: "",
         car: "",
         model: "",
-        year: ""
+        year: "",
       },
-      errors: {}
+      errors: {},
+      message: false
     };
   },
   methods: {
-    sendForm(){
+    sendForm() {
       var that = this;
-      console.log('wysylka danych');
-        axios
+      console.log("wysylka danych");
+      axios
         .post("/api/reservations", this.formData)
-        .then(() => {
+        .then((res) => {
           console.log("wyslano dane");
+          if(res.status == 201){
+            this.message = true;
+          }
+          
         })
         .catch((err) => {
           that.errors = err.response.data;
           console.log(that.errors);
-
         });
-    }
-  }
+    },
+  },
 };
 </script>

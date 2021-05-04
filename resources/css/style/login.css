@@ -14,6 +14,12 @@
     min-width: 350px;
 }
 
+.user-form-error {
+    font-weight: 700;
+    color: red;
+    font-size: 12px;
+}
+
 .user-form-flex {
     display: flex;
     flex-wrap: wrap;
@@ -32,6 +38,10 @@
 
 .user-form-flex .user-form-input {
     min-height: 55px;
+}
+
+.user-form-flex .user-form-input.error {
+    border-bottom: 1px solid #f00;
 }
 
 .user-form.shadow {

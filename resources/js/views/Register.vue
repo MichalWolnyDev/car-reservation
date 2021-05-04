@@ -4,6 +4,11 @@
       <div class="user-form-window">
         <div class="user-form shadow">
           <div class="user-form-item">
+            <div v-if="errors.name">
+              <small class="user-form-error">
+                {{ errors.name[0] }}
+              </small>
+            </div>
             <input
               class="user-form-input"
               v-model="form.name"
@@ -13,6 +18,11 @@
             />
           </div>
           <div class="user-form-item">
+            <div v-if="errors.email">
+              <small class="user-form-error">
+                {{ errors.email[0] }}
+              </small>
+            </div>
             <input
               class="user-form-input"
               v-model="form.email"
@@ -22,6 +32,11 @@
             />
           </div>
           <div class="user-form-item">
+            <div v-if="errors.password">
+              <small class="user-form-error">
+                {{ errors.password[0] }}
+              </small>
+            </div>
             <input
               class="user-form-input"
               v-model="form.password"
