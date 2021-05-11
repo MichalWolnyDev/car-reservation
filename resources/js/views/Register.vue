@@ -63,6 +63,18 @@
               Zarejestruj
             </button>
           </div>
+          <div class="login-loader" v-if="logging">
+            <div class="lds-roller">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -80,17 +92,23 @@ export default {
         password_confirmation: "",
       },
       errors: [],
+      logging: false,
     };
   },
   methods: {
     saveForm() {
+      var t = this;
+      this.logging = true;
       axios
         .post("/api/register", this.form)
         .then(() => {
-          console.log("zarejestrowano");
           this.$router.push({ name: "profile" });
+          setTimeout(() => {
+            t.logging = false;
+          }, 1500);
         })
         .catch((err) => {
+          this.logging = false;
           this.errors = err.response.data.errors;
         });
     },
