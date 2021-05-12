@@ -12,7 +12,12 @@ class LoginController extends Controller
         $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required']
-        ]);
+        ],
+        [
+            'email.required' => 'Podaj poprawny adres e-mail',
+            'password.required' => 'Błędne hasło lub jego brak'
+        ]
+    );
         
         if(Auth::attempt($request->only('email', 'password'))){
             return response()->json(Auth::user(), 200);

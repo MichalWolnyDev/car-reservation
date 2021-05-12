@@ -39,7 +39,18 @@ class ReservationController extends Controller
             'date'=> 'date_format:Y-m-d',
             'email' => 'email:rfc,dns',
             'phone' => 'required|digits:9'
-        ]);
+        ],
+        [
+            'name.required' => 'Imię jest wymagane',
+            'surname.required' => 'Nazwisko jest wymagane',
+            'car.required' => 'Marka jest wymagana',
+            'model.required' => 'Model jest wymagany',
+            'year.required' => 'Rok produkcji jest wymagany',
+            'email' => 'Podaj poprawny adres e-mail',
+            'phone.required' => 'Numer telefonu min. 9 cyfr',
+            'date_format' => 'Wybierz datę wizyty'
+        ]
+    );
 
         if ($validator->fails()) {    
             return response()->json($validator->messages(), Response::HTTP_BAD_REQUEST);

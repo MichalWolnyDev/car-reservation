@@ -14,7 +14,13 @@ class RegisterController extends Controller
             'name' => ['required'],
             'email' => ['required', 'email', 'unique:users'],
             'password' => ['required', 'between:8,255', 'confirmed']
-        ]);
+        ],
+        [
+            'name.required' => 'Nazwa profilu jest wymagana',
+            'email.required' => 'Podaj poprawny adres e-mail',
+            'password.required' => 'Błędne hasło lub jego brak'
+        ]
+    );
 
         
         User::create([
