@@ -40,12 +40,13 @@
 }
 
 .content-hello-text {
+    
     padding-top: 1rem;
 }
 
 .content-row {
     display: flex;
-    align-items: center;
+    align-items: stretch;
 }
 
 .content-col-flex {
@@ -53,7 +54,10 @@
 }
 
 .content-description {
+    display: flex;
     padding-left: 2rem;
+    align-content: center;
+    padding: 20px;
 }
 
 .content-img {
@@ -64,6 +68,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.content-formtext2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
 }
 
 .content-buttonplace {

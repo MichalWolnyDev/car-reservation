@@ -147,12 +147,13 @@
           </form>
           </div>
           <div v-else>
-            <h2>
-              Dziękujemy za wysłanie zgłoszenia!
-            </h2>
-            <p>
-              Nasz doradca wkrótce się z państwem skontaktuje.
-            </p>
+            <div class="content-formtext1">
+             <h2>Dziękujemy za wysłanie zgłoszenia!</h2>
+            <br /><br />
+           </div>
+          <div class="content-formtext2">
+            Nasz doradca wkrótce się z państwem skontaktuje.
+          </div>
           </div>
         </div>
       </div>

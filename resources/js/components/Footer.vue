@@ -5,13 +5,13 @@
           <div class="container">
             <div class="footer-address">
               <div>
-                <h4 class="footer-title">Wbijej do nas byczku</h4>
-                <p>ul. Dupowa 69 - 69-699 Poznań</p>
+                <h4 class="footer-title">Twoje rozwiązanie CRS</h4>
+                <p>ul. Leśna 5 - 62-007 Poznań</p>
                 <p>
                   <a href="tel:123123123">123123123</a>
                 </p>
                 <p>
-                  <a href="www.thirsty.pl" target="blank">www.thirsty.pl</a>
+                  <a href="www.thirsty.pl" target="blank">www.crs-reserve.pl</a>
                 </p>
               </div>
             </div>
