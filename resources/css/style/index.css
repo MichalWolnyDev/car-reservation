@@ -27,6 +27,28 @@
     width: 100%;
 }
 
+.baner-cta {
+    margin-top: 1rem;
+}
+
+.baner-button {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.baner-button:hover {
+    transform: scale(1.05);
+}
+
+.baner-button p {
+    font-size: 16px;
+}
+
 .text-center {
     text-align: center;
 }
@@ -40,7 +62,6 @@
 }
 
 .content-hello-text {
-    
     padding-top: 1rem;
 }
 

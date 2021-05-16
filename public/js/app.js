@@ -2045,6 +2045,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Form",
   data: function data() {
@@ -2478,23 +2479,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Index"
 });
@@ -2777,22 +2761,25 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-carousel */ "./node_modules/vue-carousel/dist/vue-carousel.min.js");
 /* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_carousel__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _views_app_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/app.vue */ "./resources/js/views/app.vue");
-/* harmony import */ var _views_Dashboard_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/Dashboard.vue */ "./resources/js/views/Dashboard.vue");
-/* harmony import */ var _views_Index_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/Index.vue */ "./resources/js/views/Index.vue");
-/* harmony import */ var _views_Login_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/Login.vue */ "./resources/js/views/Login.vue");
-/* harmony import */ var _views_Register_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/Register.vue */ "./resources/js/views/Register.vue");
-/* harmony import */ var _dashboardViews_Profile_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./dashboardViews/Profile.vue */ "./resources/js/dashboardViews/Profile.vue");
-/* harmony import */ var _dashboardViews_Booked_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dashboardViews/Booked.vue */ "./resources/js/dashboardViews/Booked.vue");
-/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./store/index */ "./resources/js/store/index.js");
+/* harmony import */ var vue_scrollto__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-scrollto */ "./node_modules/vue-scrollto/vue-scrollto.js");
+/* harmony import */ var vue_scrollto__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_scrollto__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _views_app_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/app.vue */ "./resources/js/views/app.vue");
+/* harmony import */ var _views_Dashboard_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/Dashboard.vue */ "./resources/js/views/Dashboard.vue");
+/* harmony import */ var _views_Index_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/Index.vue */ "./resources/js/views/Index.vue");
+/* harmony import */ var _views_Login_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/Login.vue */ "./resources/js/views/Login.vue");
+/* harmony import */ var _views_Register_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/Register.vue */ "./resources/js/views/Register.vue");
+/* harmony import */ var _dashboardViews_Profile_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dashboardViews/Profile.vue */ "./resources/js/dashboardViews/Profile.vue");
+/* harmony import */ var _dashboardViews_Booked_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dashboardViews/Booked.vue */ "./resources/js/dashboardViews/Booked.vue");
+/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./store/index */ "./resources/js/store/index.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
  //Main pages
+
 
 
 
@@ -2806,15 +2793,16 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_9__.default.use((vue_carousel__WEBPACK_IMPORTED_MODULE_0___default()));
-vue__WEBPACK_IMPORTED_MODULE_9__.default.use(vuex__WEBPACK_IMPORTED_MODULE_10__.default);
-vue__WEBPACK_IMPORTED_MODULE_9__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_11__.default);
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_11__.default({
+vue__WEBPACK_IMPORTED_MODULE_10__.default.use((vue_carousel__WEBPACK_IMPORTED_MODULE_0___default()));
+vue__WEBPACK_IMPORTED_MODULE_10__.default.use(vuex__WEBPACK_IMPORTED_MODULE_11__.default);
+vue__WEBPACK_IMPORTED_MODULE_10__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_12__.default);
+vue__WEBPACK_IMPORTED_MODULE_10__.default.use((vue_scrollto__WEBPACK_IMPORTED_MODULE_1___default()));
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_12__.default({
   mode: 'history',
   routes: [{
     path: '/',
     name: 'index',
-    component: _views_Index_vue__WEBPACK_IMPORTED_MODULE_3__.default
+    component: _views_Index_vue__WEBPACK_IMPORTED_MODULE_4__.default
   }, // {
   //     path: '/',
   //     name: 'form',
@@ -2823,15 +2811,15 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_11__.default({
   {
     path: '/dashboard',
     name: 'dashboard',
-    component: _views_Dashboard_vue__WEBPACK_IMPORTED_MODULE_2__.default,
+    component: _views_Dashboard_vue__WEBPACK_IMPORTED_MODULE_3__.default,
     children: [{
       path: '/dashboard/profile',
       name: 'profile',
-      component: _dashboardViews_Profile_vue__WEBPACK_IMPORTED_MODULE_6__.default
+      component: _dashboardViews_Profile_vue__WEBPACK_IMPORTED_MODULE_7__.default
     }, {
       path: '/dashboard/booked',
       name: 'booked',
-      component: _dashboardViews_Booked_vue__WEBPACK_IMPORTED_MODULE_7__.default
+      component: _dashboardViews_Booked_vue__WEBPACK_IMPORTED_MODULE_8__.default
     }],
     beforeEnter: function beforeEnter(to, form, next) {
       axios.get('/api/authenticated').then(function () {
@@ -2845,22 +2833,22 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_11__.default({
   }, {
     path: '/login',
     name: 'login',
-    component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_4__.default
+    component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_5__.default
   }, {
     path: '/register',
     name: 'register',
-    component: _views_Register_vue__WEBPACK_IMPORTED_MODULE_5__.default
+    component: _views_Register_vue__WEBPACK_IMPORTED_MODULE_6__.default
   }]
 });
-var store = new vuex__WEBPACK_IMPORTED_MODULE_10__.default.Store(_store_index__WEBPACK_IMPORTED_MODULE_8__.default);
-vue__WEBPACK_IMPORTED_MODULE_9__.default.prototype.$store = store;
-vue__WEBPACK_IMPORTED_MODULE_9__.default.component('navbar', __webpack_require__(/*! ./components/Nav.vue */ "./resources/js/components/Nav.vue").default);
-vue__WEBPACK_IMPORTED_MODULE_9__.default.component('footer-comp', __webpack_require__(/*! ./components/Footer.vue */ "./resources/js/components/Footer.vue").default);
-vue__WEBPACK_IMPORTED_MODULE_9__.default.component('client-form', __webpack_require__(/*! ./components/Form.vue */ "./resources/js/components/Form.vue").default);
-var app = new vue__WEBPACK_IMPORTED_MODULE_9__.default({
+var store = new vuex__WEBPACK_IMPORTED_MODULE_11__.default.Store(_store_index__WEBPACK_IMPORTED_MODULE_9__.default);
+vue__WEBPACK_IMPORTED_MODULE_10__.default.prototype.$store = store;
+vue__WEBPACK_IMPORTED_MODULE_10__.default.component('navbar', __webpack_require__(/*! ./components/Nav.vue */ "./resources/js/components/Nav.vue").default);
+vue__WEBPACK_IMPORTED_MODULE_10__.default.component('footer-comp', __webpack_require__(/*! ./components/Footer.vue */ "./resources/js/components/Footer.vue").default);
+vue__WEBPACK_IMPORTED_MODULE_10__.default.component('client-form', __webpack_require__(/*! ./components/Form.vue */ "./resources/js/components/Form.vue").default);
+var app = new vue__WEBPACK_IMPORTED_MODULE_10__.default({
   el: '#app',
   components: {
-    App: _views_app_vue__WEBPACK_IMPORTED_MODULE_1__.default
+    App: _views_app_vue__WEBPACK_IMPORTED_MODULE_2__.default
   },
   router: router
 });
@@ -21648,10 +21636,10 @@ var staticRenderFns = [
             _c("div", { staticClass: "footer-address" }, [
               _c("div", [
                 _c("h4", { staticClass: "footer-title" }, [
-                  _vm._v("Wbijej do nas byczku")
+                  _vm._v("Twoje rozwiązanie CRS")
                 ]),
                 _vm._v(" "),
-                _c("p", [_vm._v("ul. Dupowa 69 - 69-699 Poznań")]),
+                _c("p", [_vm._v("ul. Leśna 5 - 62-007 Poznań")]),
                 _vm._v(" "),
                 _c("p", [
                   _c("a", { attrs: { href: "tel:123123123" } }, [
@@ -21663,7 +21651,7 @@ var staticRenderFns = [
                   _c(
                     "a",
                     { attrs: { href: "www.thirsty.pl", target: "blank" } },
-                    [_vm._v("www.thirsty.pl")]
+                    [_vm._v("www.crs-reserve.pl")]
                   )
                 ])
               ])
@@ -22084,15 +22072,11 @@ var render = function() {
                 ])
               ])
             : _c("div", [
-                _c("h2", [
-                  _vm._v(
-                    "\n              Dziękujemy za wysłanie zgłoszenia!\n            "
-                  )
-                ]),
+                _vm._m(1),
                 _vm._v(" "),
-                _c("p", [
+                _c("div", { staticClass: "content-formtext2" }, [
                   _vm._v(
-                    "\n              Nasz doradca wkrótce się z państwem skontaktuje.\n            "
+                    "\n            Nasz doradca wkrótce się z państwem skontaktuje.\n          "
                   )
                 ])
               ])
@@ -22108,6 +22092,17 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "content-formtext1" }, [
       _c("h2", [_vm._v("Kontakt")]),
+      _vm._v(" "),
+      _c("br"),
+      _c("br")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "content-formtext1" }, [
+      _c("h2", [_vm._v("Dziękujemy za wysłanie zgłoszenia!")]),
       _vm._v(" "),
       _c("br"),
       _c("br")
@@ -22614,9 +22609,52 @@ var render = function() {
   return _c("div", [
     _c("div", [
       _c("main", [
-        _vm._m(0),
+        _c("section", [
+          _c("div", { staticClass: "baner" }, [
+            _c("div", { staticClass: "baner-relative" }, [
+              _c("img", {
+                staticClass: "baner-img",
+                attrs: { src: "/img/Baner.png", alt: "Baner" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "baner-overlay" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "baner-text" }, [
+                _c("div", { staticClass: "container" }, [
+                  _c("h1", { staticClass: "baner-title" }, [
+                    _vm._v("Zarezerwuj termin już dziś!")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "baner-cta" }, [
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "scroll-to",
+                            rawName: "v-scroll-to",
+                            value: ".content-formtext1",
+                            expression: "'.content-formtext1'"
+                          }
+                        ],
+                        staticClass: "baner-button"
+                      },
+                      [
+                        _c("p", [
+                          _vm._v(
+                            "\n                      Sprawdź naszą ofertę!\n                    "
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
         _vm._v(" "),
-        _vm._m(1),
+        _vm._m(0),
         _vm._v(" "),
         _c("section", [
           _c(
@@ -22689,43 +22727,19 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("section", [
-      _c("div", { staticClass: "baner" }, [
-        _c("div", { staticClass: "baner-relative" }, [
-          _c("img", {
-            staticClass: "baner-img",
-            attrs: { src: "/img/Baner.jpg", alt: "Baner" }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "baner-overlay" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "baner-text" }, [
-            _c("div", { staticClass: "container" }, [
-              _c("h1", { staticClass: "baner-title" }, [
-                _vm._v("Witaj w naszym serwisie!")
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("section", [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "content" }, [
           _c("div", { staticClass: "content-hello" }, [
             _c("h2", { staticClass: "content-hello-title text-center" }, [
               _vm._v(
-                "\n                Witaj przybyszu nasz serwis jest kozak\n              "
+                "\n                Witaj w systemie rezerwacji serwisu\n              "
               )
             ]),
             _vm._v(" "),
             _c("p", { staticClass: "content-hello-text text-center" }, [
+              _c("b", [_vm._v("Car Reservation System")]),
               _vm._v(
-                "\n                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec\n                egestas, diam non blandit tincidunt, elit lacus iaculis eros,\n                ut accumsan magna purus sit amet urna. Aenean eget quam\n                commodo, malesuada ante sed, vulputate erat. Mauris ut nisi\n                non neque rhoncus ornare ac sed ipsum. Nullam sit amet purus\n                vehicula sem tempus ultrices eu at massa. Donec nisl ante,\n                tempor eget felis eget, dictum mollis augue. Ut in ipsum sit\n                amet felis laoreet blandit id quis nunc. Proin quis elit\n                massa. Vivamus faucibus, dolor et congue elementum, libero\n                elit rhoncus tortor, et egestas augue lacus ut metus. Duis\n                pellentesque semper lectus, in aliquam dolor bibendum vel.\n              "
+                " jest to strona gdzie możesz zarezerwować swój termin w jednym z naszych serwisów. Nie marnuj czasu na testowanie serwisów oraz umawianie się na wizyty, które i tak są przekładane. My zrobimy to za Ciebie! Wypełnij poniższy formularz aby wybrać interesujący Ciebie termin. A my oddzwonimy aby omówić szczegóły wizyty.\n              "
               )
             ])
           ]),
@@ -22742,17 +22756,13 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "content-col content-col-flex" }, [
               _c("div", { staticClass: "content-description" }, [
-                _c("h3", [_vm._v("Dupa dupa jesteśmy fajni")]),
-                _vm._v(" "),
+                _c("h3", [_vm._v("Tylko profesjonalna obsługa i serwis")])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "content-description" }, [
                 _c("p", [
                   _vm._v(
-                    "\n                    Fusce consectetur sollicitudin ligula, a sollicitudin\n                    mauris cursus quis. Proin eget gravida nunc, ut lacinia\n                    ligula. Phasellus sed mauris elementum, luctus est ut,\n                    tempor justo. Cras finibus efficitur tincidunt. Phasellus\n                    nec lacus eleifend sem elementum suscipit quis in velit.\n                    Vivamus iaculis vitae neque sit amet consequat. Integer\n                    non dictum dui.\n                  "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "\n                    Interdum et malesuada fames ac ante ipsum primis in\n                    faucibus. Quisque feugiat convallis dui in lobortis.\n                    Aenean sagittis feugiat sapien vitae placerat. Sed sapien\n                    risus, pharetra non justo id, accumsan aliquam felis.\n                    Vestibulum ante ipsum primis in faucibus orci luctus et\n                    ultrices posuere cubilia curae; Nam imperdiet arcu eget\n                    odio viverra, eu congue metus vulputate. Donec varius non\n                    lacus id pulvinar. Aenean blandit rhoncus libero vitae\n                    bibendum.\n                  "
+                    "\n                    Dbamy o to by serwisy, z którymi współpracujemy były sprawdzone oraz przystępne cenowo. Dzięki naszemu sytemowi oraz profesjonalnej obsłudze problemy z autem odejdą w zapomnienie. A każda usterka nie będzie już straszna.\n                  "
                   )
                 ])
               ])
@@ -26445,6 +26455,568 @@ if (inBrowser && window.Vue) {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VueRouter);
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-scrollto/vue-scrollto.js":
+/*!***************************************************!*\
+  !*** ./node_modules/vue-scrollto/vue-scrollto.js ***!
+  \***************************************************/
+/***/ (function(module) {
+
+/*!
+  * vue-scrollto v2.20.0
+  * (c) 2019 Randjelovic Igor
+  * @license MIT
+  */
+(function (global, factory) {
+   true ? module.exports = factory() :
+  0;
+}(this, (function () { 'use strict';
+
+  function _typeof(obj) {
+    "@babel/helpers - typeof";
+
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+      _typeof = function (obj) {
+        return typeof obj;
+      };
+    } else {
+      _typeof = function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+      };
+    }
+
+    return _typeof(obj);
+  }
+
+  function _extends() {
+    _extends = Object.assign || function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+
+      return target;
+    };
+
+    return _extends.apply(this, arguments);
+  }
+
+  /**
+   * https://github.com/gre/bezier-easing
+   * BezierEasing - use bezier curve for transition easing function
+   * by Gaëtan Renaudeau 2014 - 2015 – MIT License
+   */
+
+  // These values are established by empiricism with tests (tradeoff: performance VS precision)
+  var NEWTON_ITERATIONS = 4;
+  var NEWTON_MIN_SLOPE = 0.001;
+  var SUBDIVISION_PRECISION = 0.0000001;
+  var SUBDIVISION_MAX_ITERATIONS = 10;
+
+  var kSplineTableSize = 11;
+  var kSampleStepSize = 1.0 / (kSplineTableSize - 1.0);
+
+  var float32ArraySupported = typeof Float32Array === 'function';
+
+  function A (aA1, aA2) { return 1.0 - 3.0 * aA2 + 3.0 * aA1; }
+  function B (aA1, aA2) { return 3.0 * aA2 - 6.0 * aA1; }
+  function C (aA1)      { return 3.0 * aA1; }
+
+  // Returns x(t) given t, x1, and x2, or y(t) given t, y1, and y2.
+  function calcBezier (aT, aA1, aA2) { return ((A(aA1, aA2) * aT + B(aA1, aA2)) * aT + C(aA1)) * aT; }
+
+  // Returns dx/dt given t, x1, and x2, or dy/dt given t, y1, and y2.
+  function getSlope (aT, aA1, aA2) { return 3.0 * A(aA1, aA2) * aT * aT + 2.0 * B(aA1, aA2) * aT + C(aA1); }
+
+  function binarySubdivide (aX, aA, aB, mX1, mX2) {
+    var currentX, currentT, i = 0;
+    do {
+      currentT = aA + (aB - aA) / 2.0;
+      currentX = calcBezier(currentT, mX1, mX2) - aX;
+      if (currentX > 0.0) {
+        aB = currentT;
+      } else {
+        aA = currentT;
+      }
+    } while (Math.abs(currentX) > SUBDIVISION_PRECISION && ++i < SUBDIVISION_MAX_ITERATIONS);
+    return currentT;
+  }
+
+  function newtonRaphsonIterate (aX, aGuessT, mX1, mX2) {
+   for (var i = 0; i < NEWTON_ITERATIONS; ++i) {
+     var currentSlope = getSlope(aGuessT, mX1, mX2);
+     if (currentSlope === 0.0) {
+       return aGuessT;
+     }
+     var currentX = calcBezier(aGuessT, mX1, mX2) - aX;
+     aGuessT -= currentX / currentSlope;
+   }
+   return aGuessT;
+  }
+
+  function LinearEasing (x) {
+    return x;
+  }
+
+  var src = function bezier (mX1, mY1, mX2, mY2) {
+    if (!(0 <= mX1 && mX1 <= 1 && 0 <= mX2 && mX2 <= 1)) {
+      throw new Error('bezier x values must be in [0, 1] range');
+    }
+
+    if (mX1 === mY1 && mX2 === mY2) {
+      return LinearEasing;
+    }
+
+    // Precompute samples table
+    var sampleValues = float32ArraySupported ? new Float32Array(kSplineTableSize) : new Array(kSplineTableSize);
+    for (var i = 0; i < kSplineTableSize; ++i) {
+      sampleValues[i] = calcBezier(i * kSampleStepSize, mX1, mX2);
+    }
+
+    function getTForX (aX) {
+      var intervalStart = 0.0;
+      var currentSample = 1;
+      var lastSample = kSplineTableSize - 1;
+
+      for (; currentSample !== lastSample && sampleValues[currentSample] <= aX; ++currentSample) {
+        intervalStart += kSampleStepSize;
+      }
+      --currentSample;
+
+      // Interpolate to provide an initial guess for t
+      var dist = (aX - sampleValues[currentSample]) / (sampleValues[currentSample + 1] - sampleValues[currentSample]);
+      var guessForT = intervalStart + dist * kSampleStepSize;
+
+      var initialSlope = getSlope(guessForT, mX1, mX2);
+      if (initialSlope >= NEWTON_MIN_SLOPE) {
+        return newtonRaphsonIterate(aX, guessForT, mX1, mX2);
+      } else if (initialSlope === 0.0) {
+        return guessForT;
+      } else {
+        return binarySubdivide(aX, intervalStart, intervalStart + kSampleStepSize, mX1, mX2);
+      }
+    }
+
+    return function BezierEasing (x) {
+      // Because JavaScript number are imprecise, we should guarantee the extremes are right.
+      if (x === 0) {
+        return 0;
+      }
+      if (x === 1) {
+        return 1;
+      }
+      return calcBezier(getTForX(x), mY1, mY2);
+    };
+  };
+
+  var easings = {
+    ease: [0.25, 0.1, 0.25, 1.0],
+    linear: [0.0, 0.0, 1.0, 1.0],
+    'ease-in': [0.42, 0.0, 1.0, 1.0],
+    'ease-out': [0.0, 0.0, 0.58, 1.0],
+    'ease-in-out': [0.42, 0.0, 0.58, 1.0]
+  };
+
+  // https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection
+  var supportsPassive = false;
+
+  try {
+    var opts = Object.defineProperty({}, 'passive', {
+      get: function get() {
+        supportsPassive = true;
+      }
+    });
+    window.addEventListener('test', null, opts);
+  } catch (e) {}
+
+  var _ = {
+    $: function $(selector) {
+      if (typeof selector !== 'string') {
+        return selector;
+      }
+
+      return document.querySelector(selector);
+    },
+    on: function on(element, events, handler) {
+      var opts = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
+        passive: false
+      };
+
+      if (!(events instanceof Array)) {
+        events = [events];
+      }
+
+      for (var i = 0; i < events.length; i++) {
+        element.addEventListener(events[i], handler, supportsPassive ? opts : false);
+      }
+    },
+    off: function off(element, events, handler) {
+      if (!(events instanceof Array)) {
+        events = [events];
+      }
+
+      for (var i = 0; i < events.length; i++) {
+        element.removeEventListener(events[i], handler);
+      }
+    },
+    cumulativeOffset: function cumulativeOffset(element) {
+      var top = 0;
+      var left = 0;
+
+      do {
+        top += element.offsetTop || 0;
+        left += element.offsetLeft || 0;
+        element = element.offsetParent;
+      } while (element);
+
+      return {
+        top: top,
+        left: left
+      };
+    }
+  };
+
+  var abortEvents = ['mousedown', 'wheel', 'DOMMouseScroll', 'mousewheel', 'keyup', 'touchmove'];
+  var defaults = {
+    container: 'body',
+    duration: 500,
+    lazy: true,
+    easing: 'ease',
+    offset: 0,
+    force: true,
+    cancelable: true,
+    onStart: false,
+    onDone: false,
+    onCancel: false,
+    x: false,
+    y: true
+  };
+  function setDefaults(options) {
+    defaults = _extends({}, defaults, options);
+  }
+  var scroller = function scroller() {
+    var element; // element to scroll to
+
+    var container; // container to scroll
+
+    var duration; // duration of the scrolling
+
+    var easing; // easing to be used when scrolling
+
+    var lazy; // checks the target position at each step
+
+    var offset; // offset to be added (subtracted)
+
+    var force; // force scroll, even if element is visible
+
+    var cancelable; // indicates if user can cancel the scroll or not.
+
+    var onStart; // callback when scrolling is started
+
+    var onDone; // callback when scrolling is done
+
+    var onCancel; // callback when scrolling is canceled / aborted
+
+    var x; // scroll on x axis
+
+    var y; // scroll on y axis
+
+    var initialX; // initial X of container
+
+    var targetX; // target X of container
+
+    var initialY; // initial Y of container
+
+    var targetY; // target Y of container
+
+    var diffX; // difference
+
+    var diffY; // difference
+
+    var abort; // is scrolling aborted
+
+    var cumulativeOffsetContainer;
+    var cumulativeOffsetElement;
+    var abortEv; // event that aborted scrolling
+
+    var abortFn = function abortFn(e) {
+      if (!cancelable) return;
+      abortEv = e;
+      abort = true;
+    };
+
+    var easingFn;
+    var timeStart; // time when scrolling started
+
+    var timeElapsed; // time elapsed since scrolling started
+
+    var progress; // progress
+
+    function scrollTop(container) {
+      var scrollTop = container.scrollTop;
+
+      if (container.tagName.toLowerCase() === 'body') {
+        // in firefox body.scrollTop always returns 0
+        // thus if we are trying to get scrollTop on a body tag
+        // we need to get it from the documentElement
+        scrollTop = scrollTop || document.documentElement.scrollTop;
+      }
+
+      return scrollTop;
+    }
+
+    function scrollLeft(container) {
+      var scrollLeft = container.scrollLeft;
+
+      if (container.tagName.toLowerCase() === 'body') {
+        // in firefox body.scrollLeft always returns 0
+        // thus if we are trying to get scrollLeft on a body tag
+        // we need to get it from the documentElement
+        scrollLeft = scrollLeft || document.documentElement.scrollLeft;
+      }
+
+      return scrollLeft;
+    }
+
+    function recalculateTargets() {
+      cumulativeOffsetContainer = _.cumulativeOffset(container);
+      cumulativeOffsetElement = _.cumulativeOffset(element);
+
+      if (x) {
+        targetX = cumulativeOffsetElement.left - cumulativeOffsetContainer.left + offset;
+        diffX = targetX - initialX;
+      }
+
+      if (y) {
+        targetY = cumulativeOffsetElement.top - cumulativeOffsetContainer.top + offset;
+        diffY = targetY - initialY;
+      }
+    }
+
+    function step(timestamp) {
+      if (abort) return done();
+      if (!timeStart) timeStart = timestamp; // When a site has a lot of media that can be loaded asynchronously,
+      // the targetY/targetX may end up in the wrong place during scrolling.
+      // So we will check this at each step
+
+      if (!lazy) {
+        recalculateTargets();
+      }
+
+      timeElapsed = timestamp - timeStart;
+      progress = Math.min(timeElapsed / duration, 1);
+      progress = easingFn(progress);
+      topLeft(container, initialY + diffY * progress, initialX + diffX * progress);
+      timeElapsed < duration ? window.requestAnimationFrame(step) : done();
+    }
+
+    function done() {
+      if (!abort) topLeft(container, targetY, targetX);
+      timeStart = false;
+
+      _.off(container, abortEvents, abortFn);
+
+      if (abort && onCancel) onCancel(abortEv, element);
+      if (!abort && onDone) onDone(element);
+    }
+
+    function topLeft(element, top, left) {
+      if (y) element.scrollTop = top;
+      if (x) element.scrollLeft = left;
+
+      if (element.tagName.toLowerCase() === 'body') {
+        // in firefox body.scrollTop doesn't scroll the page
+        // thus if we are trying to scrollTop on a body tag
+        // we need to scroll on the documentElement
+        if (y) document.documentElement.scrollTop = top;
+        if (x) document.documentElement.scrollLeft = left;
+      }
+    }
+
+    function scrollTo(target, _duration) {
+      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+      if (_typeof(_duration) === 'object') {
+        options = _duration;
+      } else if (typeof _duration === 'number') {
+        options.duration = _duration;
+      }
+
+      element = _.$(target);
+
+      if (!element) {
+        return console.warn('[vue-scrollto warn]: Trying to scroll to an element that is not on the page: ' + target);
+      }
+
+      container = _.$(options.container || defaults.container);
+      duration = options.hasOwnProperty('duration') ? options.duration : defaults.duration;
+      lazy = options.hasOwnProperty('lazy') ? options.lazy : defaults.lazy;
+      easing = options.easing || defaults.easing;
+      offset = options.hasOwnProperty('offset') ? options.offset : defaults.offset;
+      force = options.hasOwnProperty('force') ? options.force !== false : defaults.force;
+      cancelable = options.hasOwnProperty('cancelable') ? options.cancelable !== false : defaults.cancelable;
+      onStart = options.onStart || defaults.onStart;
+      onDone = options.onDone || defaults.onDone;
+      onCancel = options.onCancel || defaults.onCancel;
+      x = options.x === undefined ? defaults.x : options.x;
+      y = options.y === undefined ? defaults.y : options.y;
+
+      if (typeof offset === 'function') {
+        offset = offset(element, container);
+      }
+
+      initialX = scrollLeft(container);
+      initialY = scrollTop(container); // calculates cumulative offsets and targetX/Y + diffX/Y
+
+      recalculateTargets();
+      abort = false;
+
+      if (!force) {
+        // When the container is the default (body) we need to use the viewport
+        // height, not the entire body height
+        var containerHeight = container.tagName.toLowerCase() === 'body' ? document.documentElement.clientHeight || window.innerHeight : container.offsetHeight;
+        var containerTop = initialY;
+        var containerBottom = containerTop + containerHeight;
+        var elementTop = targetY - offset;
+        var elementBottom = elementTop + element.offsetHeight;
+
+        if (elementTop >= containerTop && elementBottom <= containerBottom) {
+          // make sure to call the onDone callback even if there is no need to
+          // scroll the container. Fixes #111 (ref #118)
+          if (onDone) onDone(element);
+          return;
+        }
+      }
+
+      if (onStart) onStart(element);
+
+      if (!diffY && !diffX) {
+        if (onDone) onDone(element);
+        return;
+      }
+
+      if (typeof easing === 'string') {
+        easing = easings[easing] || easings['ease'];
+      }
+
+      easingFn = src.apply(src, easing);
+
+      _.on(container, abortEvents, abortFn, {
+        passive: true
+      });
+
+      window.requestAnimationFrame(step);
+      return function () {
+        abortEv = null;
+        abort = true;
+      };
+    }
+
+    return scrollTo;
+  };
+
+  var _scroller = scroller();
+
+  var bindings = []; // store binding data
+
+  function deleteBinding(el) {
+    for (var i = 0; i < bindings.length; ++i) {
+      if (bindings[i].el === el) {
+        bindings.splice(i, 1);
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  function findBinding(el) {
+    for (var i = 0; i < bindings.length; ++i) {
+      if (bindings[i].el === el) {
+        return bindings[i];
+      }
+    }
+  }
+
+  function getBinding(el) {
+    var binding = findBinding(el);
+
+    if (binding) {
+      return binding;
+    }
+
+    bindings.push(binding = {
+      el: el,
+      binding: {}
+    });
+    return binding;
+  }
+
+  function handleClick(e) {
+    var ctx = getBinding(this).binding;
+    if (!ctx.value) return;
+    e.preventDefault();
+
+    if (typeof ctx.value === 'string') {
+      return _scroller(ctx.value);
+    }
+
+    _scroller(ctx.value.el || ctx.value.element, ctx.value);
+  }
+
+  var directiveHooks = {
+    bind: function bind(el, binding) {
+      getBinding(el).binding = binding;
+
+      _.on(el, 'click', handleClick);
+    },
+    unbind: function unbind(el) {
+      deleteBinding(el);
+
+      _.off(el, 'click', handleClick);
+    },
+    update: function update(el, binding) {
+      getBinding(el).binding = binding;
+    }
+  };
+  var VueScrollTo = {
+    bind: directiveHooks.bind,
+    unbind: directiveHooks.unbind,
+    update: directiveHooks.update,
+    beforeMount: directiveHooks.bind,
+    unmounted: directiveHooks.unbind,
+    updated: directiveHooks.update,
+    scrollTo: _scroller,
+    bindings: bindings
+  };
+
+  var install = function install(Vue, options) {
+    if (options) setDefaults(options);
+    Vue.directive('scroll-to', VueScrollTo);
+    var properties = Vue.config.globalProperties || Vue.prototype;
+    properties.$scrollTo = VueScrollTo.scrollTo;
+  };
+
+  if (typeof window !== 'undefined' && window.Vue) {
+    window.VueScrollTo = VueScrollTo;
+    window.VueScrollTo.setDefaults = setDefaults;
+    window.VueScrollTo.scroller = scroller;
+    if (window.Vue.use) window.Vue.use(install);
+  }
+
+  VueScrollTo.install = install;
+
+  return VueScrollTo;
+
+})));
 
 
 /***/ }),

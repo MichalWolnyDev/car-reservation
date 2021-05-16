@@ -5,11 +5,18 @@
         <section>
           <div class="baner">
             <div class="baner-relative">
-              <img class="baner-img" src="/img/Baner.jpg" alt="Baner" />
+              <img class="baner-img" src="/img/Baner.png" alt="Baner" />
               <div class="baner-overlay"></div>
               <div class="baner-text">
                 <div class="container">
                   <h1 class="baner-title">Zarezerwuj termin już dziś!</h1>
+                  <div class="baner-cta">
+                    <div class="baner-button" v-scroll-to="'.content-formtext1'">
+                      <p>
+                        Sprawdź naszą ofertę!
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -33,10 +33,6 @@
     margin-bottom: 2rem;
 }
 
-.user-form-flex .user-form-item:last-of-type {
-    margin-right: 0;
-}
-
 .user-form-flex .user-form-input {
     min-height: 55px;
 }
