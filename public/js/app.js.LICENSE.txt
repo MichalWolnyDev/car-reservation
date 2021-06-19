@@ -1,7 +1,19 @@
 /*!
+  * vue-scrollto v2.20.0
+  * (c) 2019 Randjelovic Igor
+  * @license MIT
+  */
+
+/*!
  * Vue.js v2.6.12
  * (c) 2014-2020 Evan You
  * Released under the MIT License.
+ */
+
+/*!
+ * vue-carousel v0.18.0-alpha
+ * (c) 2019 todd.beauchamp@ssense.com
+ * https://github.com/ssense/vue-carousel#readme
  */
 
 /*!
